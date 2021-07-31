@@ -1,0 +1,18 @@
+body{
+    background-color: aqua;
+}
+h1{
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Major Mono Display', monospace;;
+}
+h2, div{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 15%;
+    
+}
+#fname{
+    padding: 20px;    
+}
+
