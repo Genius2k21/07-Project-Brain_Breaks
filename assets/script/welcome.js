@@ -1,6 +1,3 @@
-// This handles the main section of the screens / hiding screens and displaying screens 
-
-// TO DO: make more script files for different features 
 const getName = document.querySelector('#entername');
 const submitBtn = document.querySelector('#submitname');
 const form = document.querySelector('form');
