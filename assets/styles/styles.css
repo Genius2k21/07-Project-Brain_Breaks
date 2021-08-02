@@ -50,18 +50,29 @@ h1{
     align-items:center;
 }
 
-#set_time_btn{
-    /* height:300px; */
+#time_sel_cont{
+    width: 90%;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
+}
+
+#set_time_btn{
+    margin-top: 20px;
+
 }
 
 #time_select{
     width: 300px;
-    margin-top: 20px;
 }
 
 #selected_time{
     margin-top:20px
+}
+
+output{
+    margin-top: 20px;
 }
 
 /* ------------------------------------------------ */

@@ -4,6 +4,7 @@ var movingOutline = document.querySelector('.moving_outline circle');
 var addMinute = document.querySelector('#plus_one');
 var timeDisplay = document.querySelector('#time_display');
 var setTimeBtn = document.querySelector("#set_time_btn")
+var selectedTimeEl = document.querySelector("#selected_time");
 
 movingOutlineLength = outline.getTotalLength();
 console.log(movingOutlineLength);
@@ -21,6 +22,10 @@ setTimeBtn.addEventListener("click", function(){
 
     timeDisplay.textContent = formattedTime;
 });
+
+function updateTextInput(val) {
+    selectedTimeEl.value=val; 
+  }
 
 
 
