@@ -21,24 +21,18 @@
 </head>
 
 <body>
-    <div class="container">
-        <section class="col s12 section" id="welcome">
-            <!-- Welcome Page  -->
-            <h1>Brain Breaks</h1>
-            <p class="welcome-text center">Welcome! We are so excited that you are using Brain Breaks. Brain Breaks is designed to help you make the most of your workday. We hope you enjoy!</p>
-            <!-- User input name needed  -->
-            <!--<h2>Enter your full name:</h2>-->
-            <div class="EnterFullName">
-                <form class="col s12">
-                    <div class="row">
-                      <div class="input-field col s6">
-                        <input placeholder="Type Your Name Here" id="first_name" type="text" class="validate">
-                        <label for="first_name"></label>
-                        </div>
-                    </div>
-                    <button class="btn waves-effect waves-light" value="submit" type="submit" name="action">Submit
-                        <i class="material-icons right">send</i>
-                    </button>
+    <section class="hide" id="welcome">
+        <!-- Welcome Page  -->
+        <h1>Brain Breaks</h1>
+        <h2 class="welcome-text">Welcome!</h2>
+        <!-- User input name needed  -->
+        <!--<h2>Enter your full name:</h2>-->
+        <div class="EnterFullName">
+            <h2>Enter your full name:</h1>
+                <form>
+                    <!---- <label for="fname">Enter your full name:</label><br>-->
+                    <input type="text" id="entername"><br>
+                    <input type="submit" id="submitname" value="submit">
                 </form>
                 <!-- <h2>Enter your full name:</h2>
                 <form>
@@ -68,22 +62,20 @@
 
             <button id="set_time_btn">Set Time</button>
             <!-- User input for memes needed  -->
-
-
-
             </div>
 
-        </section>
-        <section class="section" id="countdown">
-            <h3 id="time_display">_:_ _</h3>
-            <!-- <i id="playBtn" class="fas fa-play"></i>
-            <div class="clock_container">
-                <svg class="track_outline" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20" />
-                </svg>
-                <svg class="moving_outline" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20" />
-                </svg>
+    </section>
+    <section id="countdown">
+        <h3 id="time_display">_:_ _</h3>
+        <i id="playBtn" class="fas fa-play"></i>
+        <!-- 
+        <div class="clock_container">
+            <svg class="track_outline" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20" />
+            </svg>
+            <svg class="moving_outline" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20" />
+            </svg>
 
                 <p id="plus_one">+1:00</p>
             </div> -->
