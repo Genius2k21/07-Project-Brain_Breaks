@@ -1,44 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>Brain Breaks</title>
-    Add link 
 </head>
+
 <body>
-    <section>
+    <section id="welcome">
         <!-- Welcome Page  -->
         <h1>Brain Breaks</h1>
-        <h2>Welcome!</h2>
+        <h2 class="welcome-text">Welcome!</h2>
         <!-- User input name needed  -->
         <!--<h2>Enter your full name:</h2>-->
         <div class="EnterFullName">
-            <h2>Enter your full name</h1>
-            <form>
-               <!---- <label for="fname">Enter your full name:</label><br>-->
-                <input type="text" id="fname" name="fname"><br>
-            </form>
+            <h2>Enter your full name:</h1>
+                <form>
+                    <!---- <label for="fname">Enter your full name:</label><br>-->
+                    <input type="text" id="entername"><br>
+                    <input type="submit" id="submitname" value="submit">
+                </form>
         </div>
     </section>
-    <section>
-        <!-- Set Crunch Time Page  -->
+    <section id="set_time">
+        <header>
+
+        </header>
+
+        <h2>How long would you like to focus?</h2>
+        <div id="time_sel_cont">
+            <p>0 Min</p>
+            <p>120 Min</p>
+        </div>
+        <input value="15" id="time_select" type="range" min="0" max="120" step="15"
+            oninput="this.nextElementSibling.value = this.value">
+        <output>_ _</output>
+
+        <h2>Total Break Time:</h2>
+        <p id="calc_break_time"></p>
+
+
+        <button id="set_time_btn">Set Time</button>
         <!-- User input for memes needed  -->
+
+
+
+        </div>
+
     </section>
-    <section>
-        <!-- Countdown Timer Page  -->
+    <section id="countdown">
+        <h3 id="time_display">_:_ _</h3>
+        <!-- <i id="playBtn" class="fas fa-play"></i>
+        <div class="clock_container">
+            <svg class="track_outline" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20" />
+            </svg>
+            <svg class="moving_outline" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20" />
+            </svg>
+
+            <p id="plus_one">+1:00</p>
+        </div> -->
+
+
+        <span>
+
+        </span>
+        </div>
     </section>
-    <section>
+    <section id="break-page">
         <!-- Brain Break Page WHOOOO!!!  -->
+        <h1 id="break-title">Brain Breaks</h1>
+
+        <h2 id="good-job">Good Job! Now take a Break!</h2>
+
+        <img src="./assets/Images/guess-what-its-break-time.jpeg" id="break-img">
+
+        <button id="break-button">Take my break</button>
+
+
     </section>
     <section>
         <!-- Displays meme and message for self care  -->
         <!-- Add swipe up feature for more memes  -->
     </section>
+    <script src="./assets/script/script.js"></script>
+    <script src="./assets/script/welcome.js"></script>
+    <script src="./assets/script/countdown.js"></script>
 </body>
+
 </html>

@@ -1,18 +1,160 @@
-body{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark: #242424;
+}
+
+#welcome{
     background-color: aqua;
+    text-align: center;
+    height: 812px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 h1{
     text-align: center;
     font-size: xx-large;
     font-family: 'Major Mono Display', monospace;;
 }
-h2, div{
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 15%;
-    
-}
-#fname{
-    padding: 20px;    
+.welcome-text{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 40px;
 }
 
+#entername{
+   padding: 30px;
+}
+#submitname {
+    width: 100px;
+    height: 50px;
+    margin-top: 50px;
+    background-color: darkcyan;
+    border: 2px white;
+    border-radius: 10px;
+    font-size: 15px;
+    box-shadow: 0 0 30px #85cf6d;
+}
+/* ------------------------------------------------ */
+
+#set_time{
+    height: 812px;
+    background: #fff;
+    display: flex;  
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+}
+
+#time_sel_cont{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#set_time_btn{
+    margin-top: 20px;
+
+}
+
+#time_select{
+    width: 300px;
+}
+
+#selected_time{
+    margin-top:20px
+}
+
+output{
+    margin-top: 20px;
+}
+
+/* ------------------------------------------------ */
+
+#countdown{
+    height: 812px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#countdown svg{
+    position: absolute;
+    height: 40%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.clock_container{
+    
+}
+
+#playBtn{
+    color: rgb(35, 224, 17);
+    font-size: 50px;
+}
+
+#plus_one{
+    /* color: #fff; */
+    font-size: 40px;
+
+}
+
+#time_display{
+/* color: #fff; */
+}
+
+#time_display{
+    position: absolute;
+    bottom: 50%;
+    font-size: 50px;
+}
+
+
+
+/* ------------------------------------------------ */
+
+#break-page{
+    background-color: aqua;
+    height: 812px;
+}
+
+#break-title{
+    text-align: center;
+    padding-top: 50px;
+}
+
+#break-button{
+    margin-left: 36%;
+    margin-top: 10%;
+    padding: 10px;
+    border: white;
+    border-radius: 5px;
+    background-color: darkcyan;
+    
+}
+
+#good-job{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10%;
+
+}
+
+#break-img{
+    width: 50%;
+    margin-top: 10%;
+    margin-left: 25%;
+
+}
