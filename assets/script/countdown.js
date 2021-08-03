@@ -17,10 +17,10 @@ var formattedBreakTime = [];
 slider.addEventListener("change", function () {
   focusTime = [];
   breakTime = [];
-  var liveBreakTime = slider.value;
-  breakTimeTextEl.innerText = liveBreakTime * 0.2;
-  breakTime.push(liveBreakTime);
-  focusTime.push(liveBreakTime * 0.2);
+  var liveFocusTime = slider.value;
+  breakTimeTextEl.innerText = liveFocusTime * 0.2;
+  breakTime.push(liveFocusTime * 0.2);
+  focusTime.push(liveFocusTime);
   console.log(focusTime);
   console.log(breakTime);
 
@@ -35,9 +35,11 @@ slider.addEventListener("change", function () {
   console.log(formattedBreakTime);
 });
 
-setTimeBtn.addEventListener("click", getTime);
+function setTimeDisplay() {
+  timeDisplay.textContent = formattedFocusTime;
+}
 
-function getTime() {}
+setTimeBtn.addEventListener("click", setTimeDisplay);
 
 // movingOutlineLength = outline.getTotalLength();
 // console.log(movingOutlineLength);

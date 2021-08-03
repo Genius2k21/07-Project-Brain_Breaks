@@ -79,7 +79,7 @@ output{
 
 #countdown{
     height: 812px;
-    background: var(--dark);
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,21 +106,20 @@ output{
 }
 
 #plus_one{
-    color: #fff;
+    /* color: #fff; */
     font-size: 40px;
 
 }
 
 #time_display{
-color: #fff;
+/* color: #fff; */
 }
 
 #time_display{
     position: absolute;
-    bottom: 10%;
+    bottom: 50%;
+    font-size: 50px;
 }
-
-
 
 
 
