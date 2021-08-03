@@ -1,31 +1,36 @@
+:root{
+    --dark: #3f3e3e;
+    --light: #67f8f8; 
+    --: rgb(26, 59, 248); 
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 16px; 
+    background-color: var(--dark);
 }
 
-:root{
-    --dark: #242424;
-}
-
-#welcome{
-    background-color: aqua;
+/* #welcome{
+    background-color: var(--light);
     text-align: center;
     height: 812px;
     display: flex;
     flex-direction: column;
     width: 100%;
-}
+} */
 h1{
     text-align: center;
-    font-size: xx-large;
+    font-size: 3em; 
     font-family: 'Major Mono Display', monospace;;
+    text-shadow: 3px 3px 8px var(--light);
+    color: var(--light); 
 }
-.welcome-text{
+/* .welcome-text{
     margin-top: 30px;
     margin-bottom: 30px;
-    font-size: 40px;
-}
+} */
 
 #entername{
    padding: 30px;

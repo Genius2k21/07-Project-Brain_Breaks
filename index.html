@@ -25,19 +25,27 @@
         <section class="col s12 section" id="welcome">
             <!-- Welcome Page  -->
             <h1>Brain Breaks</h1>
-            <h2 class="welcome-text">Welcome!</h2>
+            <p class="welcome-text center">Welcome! We are so excited that you are using Brain Breaks. Brain Breaks is designed to help you make the most of your workday. We hope you enjoy!</p>
             <!-- User input name needed  -->
             <!--<h2>Enter your full name:</h2>-->
             <div class="EnterFullName">
-                <h2>Enter your full name:</h2>
-                <form>
-                    <!---- <label for="fname">Enter your full name:</label><br>-->
-                    <input type="text" id="entername"> </input> 
-                    <!-- <button type="submit" id="submitname" value="submit"> Submit </button> -->
+                <form class="col s12">
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input placeholder="Type Your Name Here" id="first_name" type="text" class="validate">
+                        <label for="first_name"></label>
+                        </div>
+                    </div>
                     <button class="btn waves-effect waves-light" value="submit" type="submit" name="action">Submit
                         <i class="material-icons right">send</i>
                     </button>
                 </form>
+                <!-- <h2>Enter your full name:</h2>
+                <form>
+                     <label for="fname">Enter your full name:</label><br>-->
+                    <!-- <input type="text" id="entername"> </input> -->
+                    <!-- <button type="submit" id="submitname" value="submit"> Submit </button> -->
+                <!-- </form> -->
             </div>
         </section>
         <section class="section" id="set_time">
