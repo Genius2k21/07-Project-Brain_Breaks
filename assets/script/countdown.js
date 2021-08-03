@@ -44,8 +44,10 @@ function setTimeDisplay() {
 
 setTimeBtn.addEventListener("click", setTimeDisplay);
 
-play.addEventListener("click", () =>
+var startTimer = play.addEventListener("click", () =>
   window.setInterval(function () {
+    play.classList.add("hide");
+
     let time = startingSeconds;
     hours = Math.floor(time / 3600);
     time %= 3600;
@@ -61,6 +63,10 @@ play.addEventListener("click", () =>
     timeDisplay.textContent = hours + ":" + minutes + ":" + seconds;
 
     startingSeconds--;
+
+    if (time == 0) {
+      clearInterval(startTimer);
+    }
   }, 1000)
 );
 
