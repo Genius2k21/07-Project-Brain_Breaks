@@ -52,9 +52,13 @@ play.addEventListener("click", () =>
     minutes = Math.floor(time / 60);
     seconds = time % 60;
 
-    console.log(
-      (timeDisplay.textContent = hours + ":" + minutes + ":" + seconds)
-    );
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    } else {
+      seconds;
+    }
+
+    timeDisplay.textContent = hours + ":" + minutes + ":" + seconds;
 
     startingSeconds--;
   }, 1000)
