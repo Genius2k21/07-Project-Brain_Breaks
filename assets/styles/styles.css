@@ -14,6 +14,7 @@
     height: 812px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 h1{
     text-align: center;
@@ -52,7 +53,6 @@ h1{
 
 #time_sel_cont{
     width: 90%;
-    margin-left: 1rem;
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -76,6 +76,7 @@ output{
 }
 
 /* ------------------------------------------------ */
+
 #countdown{
     height: 812px;
     background: var(--dark);
