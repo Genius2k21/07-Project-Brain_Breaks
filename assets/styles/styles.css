@@ -10,25 +10,25 @@
     box-sizing: border-box;
     font-size: 16px; 
     background-color: var(--dark);
-    color: var(--light); 
+    color: var(--aqua); 
 }
 
 #welcome{
-    background-color: aqua;
+    background-color: var(--dark); 
     text-align: center;
     height: 812px;
     display: flex;
     flex-direction: column;
     width: 100%;
 
-} */
+} 
 
 h1{
     text-align: center;
     font-size: 3em; 
-    font-family: 'Major Mono Display', monospace;;
-    text-shadow: 3px 3px 8px var(--light);
-    color: var(--light); 
+    font-family: 'Major Mono Display', monospace;
+    text-shadow: 3px 3px 8px var(--aqua);
+    color: var(--aqua); 
 }
 /* .welcome-text{
     margin-top: 30px;
