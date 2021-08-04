@@ -26,7 +26,7 @@ slider.addEventListener("change", function () {
   focusTime.push(liveFocusTime * 1);
   startingSeconds.push(liveFocusTime * 60);
 
-  //formats timer in the date format 
+  //formats timer using the date js function 
   formattedFocusTime = new Date(focusTime * 60 * 1000)
     .toISOString()
     .substr(12, 4);
@@ -37,32 +37,39 @@ slider.addEventListener("change", function () {
 
 });
 
+//displays focus time on screen 
 function setTimeDisplay() {
   timeDisplay.textContent = formattedFocusTime;
 }
 
+//when user clicks Set Time button, then time is displayed on screen  
 setTimeBtn.addEventListener("click", setTimeDisplay);
 
+//when user clicks on play button, then ... 
 var startTimer = play.addEventListener("click", () =>
   window.setInterval(function () {
+    //hides the play button 
     play.classList.add("hide");
 
+    //time is converted to miliseconds so interval can count down by seconds 
     let time = startingSeconds;
     hours = Math.floor(time / 3600);
     time %= 3600;
     minutes = Math.floor(time / 60);
     seconds = time % 60;
 
+    //if time is less than 10 seconds, then add an extra 0
     if (seconds < 10) {
       seconds = "0" + seconds;
     } else {
       seconds;
     }
 
+    //display countdown on screen 
     timeDisplay.textContent = hours + ":" + minutes + ":" + seconds;
-
+    //seconds countdown by 1 
     startingSeconds--;
-
+    //when time reaches 0, clear timer 
     if (time == 0) {
       clearInterval(startTimer);
     }
