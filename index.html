@@ -24,47 +24,49 @@
     <section id="welcome">
         <!-- Welcome Page  -->
         <h1>Brain Breaks</h1>
-        <p class="welcome-text">Welcome! Our goal is to help you make the most out of your hectic workday with this timer. We hope you enjoy! </p>
+        <p class="welcome-text">Welcome! Our goal is to help you make the most out of your hectic workday with this
+            timer. We hope you enjoy! </p>
         <div class="EnterFullName">
             <h3>Enter your full name:</h3>
-                <form>
-                    <input type="text" id="entername"><br>
-                    <input type="submit" id="submitname" value="submit">
-                </form>
-                <h2 id="welcome-alert"></h2>
-            </div>
-        </section>
-        <section class="section" id="set_time">
-            <header>
+            <form>
+                <input type="text" id="entername"><br>
+                <input type="submit" id="submitname" value="submit">
+            </form>
+            <h2 id="welcome-alert"></h2>
+        </div>
+    </section>
+    <section class="section" id="set_time">
+        <header>
 
-            </header>
+        </header>
 
-            <h2>How long would you like to focus?</h2>
-            <div id="time_sel_cont">
-                <p>0 Min</p>
-                <p>120 Min</p>
-            </div>
-            <input id="time_select" type="range" min="0" max="120" step="15"
-                oninput="this.nextElementSibling.value = this.value">
-            <output>_ _</output>
+        <h2>How long would you like to focus?</h2>
+        <div id="time_sel_cont">
+            <p>0 Min</p>
+            <p>120 Min</p>
+        </div>
+        <input id="time_select" type="range" min="0" max="120" step="15"
+            oninput="this.nextElementSibling.value = this.value">
+        <output>_ _</output>
 
-            <h2>Total Break Time:</h2>
-            <p id="calc_break_time"></p>
+        <h2>Total Break Time:</h2>
+        <p id="calc_break_time"></p>
 
 
-            <button id="set_time_btn">Set Time</button>
-            <!-- User input for memes needed  -->
-            </div>
+        <button id="set_time_btn">Set Time</button>
+        <!-- User input for memes needed  -->
+        </div>
 
     </section>
     <!-- Placeholder for user input for memes -->
-    <section>
+    <section class="chooseMeme">
         <h2>Choose a "Cat"agory: </h2>
         <button id="catBtn"> Cats </button>
         <button id="dogBtn"> Dogs </button>
     </section>
     <section id="countdown">
         <h3 id="time_display">_ _:_ _</h3>
+        <p id="plus_one">+1:00</p>
         <i id="playBtn" class="fas fa-play"></i>
         <!-- 
         <div class="clock_container">
@@ -79,28 +81,28 @@
             </div> -->
 
 
-            <span>
+        <span>
 
-            </span>
-            </div>
-        </section>
-        <section class="section" id="break-page">
-            <!-- Brain Break Page WHOOOO!!!  -->
-            <h1 id="break-title">Brain Breaks</h1>
+        </span>
+        </div>
+    </section>
+    <section class="section" id="break-page">
+        <!-- Brain Break Page WHOOOO!!!  -->
+        <h1 id="break-title">Brain Breaks</h1>
 
-            <h2 id="good-job">Good Job! Now take a Break!</h2>
+        <h2 id="good-job">Good Job! Now take a Break!</h2>
 
-            <img src="./assets/Images/guess-what-its-break-time.jpeg" id="break-img">
+        <img src="./assets/Images/guess-what-its-break-time.jpeg" id="break-img">
 
-            <button id="break-button">Take my break</button>
+        <button id="break-button">Take my break</button>
 
 
-        </section>
-        <section class="section">
-            <!-- Displays meme and message for self care  -->
-            <!-- Add swipe up feature for more memes  -->
-        </section>
-    </div> 
+    </section>
+    <section class="section">
+        <!-- Displays meme and message for self care  -->
+        <!-- Add swipe up feature for more memes  -->
+    </section>
+    </div>
     <script src="./assets/script/script.js"></script>
     <script src="./assets/script/welcome.js"></script>
     <script src="./assets/script/countdown.js"></script>
