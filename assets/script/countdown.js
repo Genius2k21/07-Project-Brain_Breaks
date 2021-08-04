@@ -7,6 +7,7 @@ var setTimeBtn = document.querySelector("#set_time_btn");
 var selectedTimeEl = document.querySelector("#selected_time");
 var slider = document.querySelector("#time_select");
 var breakTimeTextEl = document.querySelector("#calc_break_time");
+var addOne = document.querySelector('#plus_one');
 
 var focusTime = [];
 var breakTime = [];
@@ -15,23 +16,23 @@ var formattedFocusTime = [];
 var formattedBreakTime = [];
 
 function setLocalStorage() {
-localStorage.setItem("focusTime", focusTime); 
-localStorage.setItem("breakTime", breakTime); 
+  localStorage.setItem("focusTime", focusTime);
+  localStorage.setItem("breakTime", breakTime);
 }
 
-//adds event listener to the slider 
+//adds event listener to the slider
 slider.addEventListener("change", function () {
-  //this grabs the slider's value 
+  //this grabs the slider's value
   var liveFocusTime = slider.value;
-  //this calculates the user's breaktime 
+  //this calculates the user's breaktime
   breakTimeTextEl.innerText = liveFocusTime * 0.2;
 
-  //saves both times into the empty arrays 
+  //saves both times into the empty arrays
   breakTime.push(liveFocusTime * 0.2);
   focusTime.push(liveFocusTime * 1);
   startingSeconds.push(liveFocusTime * 60);
 
-  //formats timer using the date js function 
+  //formats timer using the date js function
   formattedFocusTime = new Date(focusTime * 60 * 1000)
     .toISOString()
     .substr(12, 4);
@@ -39,27 +40,26 @@ slider.addEventListener("change", function () {
   formattedBreakTime = new Date(breakTime * 60 * 1000)
     .toISOString()
     .substr(12, 4);
-
 });
 
-//displays focus time on screen 
+//displays focus time on screen
 function setTimeDisplay() {
   timeDisplay.textContent = formattedFocusTime;
 }
 
-//when user clicks Set Time button, then time is displayed on screen & saves times into local storage 
-setTimeBtn.addEventListener("click", function() {
+//when user clicks Set Time button, then time is displayed on screen & saves times into local storage
+setTimeBtn.addEventListener("click", function () {
   setTimeDisplay();
-  setLocalStorage(); 
-}); 
+  setLocalStorage();
+});
 
-//when user clicks on play button, then ... 
+//when user clicks on play button, then ...
 var startTimer = play.addEventListener("click", () =>
   window.setInterval(function () {
-    //hides the play button 
+    //hides the play button
     play.classList.add("hide");
 
-    //time is converted to miliseconds so interval can count down by seconds 
+    //time is converted to miliseconds so interval can count down by seconds
     let time = startingSeconds;
     hours = Math.floor(time / 3600);
     time %= 3600;
@@ -73,38 +73,13 @@ var startTimer = play.addEventListener("click", () =>
       seconds;
     }
 
-    //display countdown on screen 
+    //display countdown on screen
     timeDisplay.textContent = hours + ":" + minutes + ":" + seconds;
-    //seconds countdown by 1 
+    //seconds countdown by 1
     startingSeconds--;
-    //when time reaches 0, clear timer 
+    //when time reaches 0, clear timer
     if (time == 0) {
       clearInterval(startTimer);
     }
   }, 1000)
 );
-
-// play.addEventListener("click", () =>
-
-// play.addEventListener("click", timer());
-
-// function startWorkTimer(duration, display) {
-//   var timer = duration,
-//     minutes,
-//     seconds;
-//     setInterval(function () {
-//     minutes = parseInt(timer / 60, 10);
-//     seconds = parseInt(timer % 60, 10);
-
-//     minutes = minutes < 10 ? "0" + minutes : minutes;
-//     seconds = seconds < 10 ? "0" + seconds : seconds;
-
-//     display.textContent = minutes + ":" + seconds;
-
-// }, 1000);
-
-// movingOutlineLength = outline.getTotalLength();
-// console.log(movingOutlineLength);
-
-// movingOutline.style.strokeDasharray = movingOutlineLength;
-// movingOutline.style.strokeDashoffset = movingOutlineLength;
