@@ -1,13 +1,12 @@
 var play = document.querySelector("#playBtn");
 var outline = document.querySelector(".track_outline circle");
 var movingOutline = document.querySelector(".moving_outline circle");
-var addMinute = document.querySelector("#plus_one");
 var timeDisplay = document.querySelector("#time_display");
 var setTimeBtn = document.querySelector("#set_time_btn");
 var selectedTimeEl = document.querySelector("#selected_time");
 var slider = document.querySelector("#time_select");
 var breakTimeTextEl = document.querySelector("#calc_break_time");
-var addOne = document.querySelector('#plus_one');
+var addOne = document.querySelector("#plus_one");
 
 var focusTime = [];
 var breakTime = [];
@@ -83,3 +82,10 @@ var startTimer = play.addEventListener("click", () =>
     }
   }, 1000)
 );
+
+function addMinute() {
+  console.log("add minute");
+  startingSeconds = startingSeconds + 60;
+}
+
+addOne.addEventListener("click", addMinute);

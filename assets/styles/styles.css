@@ -12,6 +12,10 @@
     color: var(--aqua); 
 }
 
+.hide{
+    display: none;
+}
+
 #welcome{
     background-color: var(--dark); 
     text-align: center;
