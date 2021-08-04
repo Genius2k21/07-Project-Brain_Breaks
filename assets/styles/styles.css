@@ -35,6 +35,13 @@ h1{
     margin-bottom: 30px;
 } */
 
+.hide {
+    display:none; 
+}
+.show {
+    display:block; 
+}
+
 #entername{
    padding: 30px;
 }
