@@ -13,9 +13,15 @@ function getMeme(){
           console.log(data[0].data.children[0].data.url_overridden_by_dest);
       })
 }
+//this saves the user's choice into local storage 
+function setLocalStorage(event) {
+localStorage.setItem("User-Choice", event.target.value); 
+}
+
 function getUserChoice(event) {
   //this logs the value of the user's choice button 
   var userChoice = event.target.value;
+  setLocalStorage(event); 
   console.log(userChoice); 
 }
 
