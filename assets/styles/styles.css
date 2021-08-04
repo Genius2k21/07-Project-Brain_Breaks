@@ -1,7 +1,7 @@
 :root{
     --dark: #3f3e3e;
-    --light: #67f8f8; 
-    --: rgb(26, 59, 248); 
+    --aqua: #67f8f8; 
+    --light: white; 
 }
 
 *{
@@ -10,6 +10,7 @@
     box-sizing: border-box;
     font-size: 16px; 
     background-color: var(--dark);
+    color: var(--light); 
 }
 
 #welcome{
