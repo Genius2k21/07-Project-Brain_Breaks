@@ -14,6 +14,11 @@ let startingSeconds = [];
 var formattedFocusTime = [];
 var formattedBreakTime = [];
 
+function setLocalStorage() {
+localStorage.setItem("focusTime", focusTime); 
+localStorage.setItem("breakTime", breakTime); 
+}
+
 //adds event listener to the slider 
 slider.addEventListener("change", function () {
   //this grabs the slider's value 
@@ -42,8 +47,11 @@ function setTimeDisplay() {
   timeDisplay.textContent = formattedFocusTime;
 }
 
-//when user clicks Set Time button, then time is displayed on screen  
-setTimeBtn.addEventListener("click", setTimeDisplay);
+//when user clicks Set Time button, then time is displayed on screen & saves times into local storage 
+setTimeBtn.addEventListener("click", function() {
+  setTimeDisplay();
+  setLocalStorage(); 
+}); 
 
 //when user clicks on play button, then ... 
 var startTimer = play.addEventListener("click", () =>
