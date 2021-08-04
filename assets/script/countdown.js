@@ -11,22 +11,22 @@ var breakTimeTextEl = document.querySelector("#calc_break_time");
 var focusTime = [];
 var breakTime = [];
 let startingSeconds = [];
-
 var formattedFocusTime = [];
 var formattedBreakTime = [];
 
+//adds event listener to the slider 
 slider.addEventListener("change", function () {
-  focusTime = [];
-  breakTime = [];
+  //this grabs the slider's value 
   var liveFocusTime = slider.value;
+  //this calculates the user's breaktime 
   breakTimeTextEl.innerText = liveFocusTime * 0.2;
-  breakTime.push(liveFocusTime * 0.2);
-  focusTime.push(liveFocusTime);
-  startingSeconds.push(liveFocusTime * 60);
-  console.log(focusTime);
-  console.log(breakTime);
-  console.log(startingSeconds);
 
+  //saves both times into the empty arrays 
+  breakTime.push(liveFocusTime * 0.2);
+  focusTime.push(liveFocusTime * 1);
+  startingSeconds.push(liveFocusTime * 60);
+
+  //formats timer in the date format 
   formattedFocusTime = new Date(focusTime * 60 * 1000)
     .toISOString()
     .substr(12, 4);
@@ -34,8 +34,7 @@ slider.addEventListener("change", function () {
   formattedBreakTime = new Date(breakTime * 60 * 1000)
     .toISOString()
     .substr(12, 4);
-  console.log(formattedFocusTime);
-  console.log(formattedBreakTime);
+
 });
 
 function setTimeDisplay() {
