@@ -1,4 +1,5 @@
 var play = document.querySelector("#playBtn");
+var pause = document.getElementById("pauseBtn"); 
 var outline = document.querySelector(".track_outline circle");
 var movingOutline = document.querySelector(".moving_outline circle");
 var timeDisplay = document.querySelector("#time_display");
@@ -13,6 +14,8 @@ var breakTime = [];
 let startingSeconds = [];
 var formattedFocusTime = [];
 var formattedBreakTime = [];
+
+pause.classList.add("hide"); 
 
 function setLocalStorage() {
   localStorage.setItem("focusTime", focusTime);
@@ -55,8 +58,11 @@ setTimeBtn.addEventListener("click", function () {
 //when user clicks on play button, then ...
 var startTimer = play.addEventListener("click", () =>
   window.setInterval(function () {
-    //hides the play button
+
+    //hides the play button, and shows the pause button 
     play.classList.add("hide");
+    pause.classList.remove("hide"); 
+    pause.classList.add("show"); 
 
     //time is converted to miliseconds so interval can count down by seconds
     let time = startingSeconds;

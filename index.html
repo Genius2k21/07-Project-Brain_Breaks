@@ -27,6 +27,7 @@
         <p class="welcome-text">Welcome! Our goal is to help you make the most out of your hectic workday with this
             timer. We hope you enjoy! </p>
         <div class="EnterFullName">
+
             <h4>Enter your full name:</h4>
                 <form>
                     <input type="text" id="entername"><br>
@@ -37,10 +38,8 @@
         </section>
         <section class="section" id="set_time">
             <header>
-
+                <h2>How long would you like to focus?</h2>
             </header>
-
-            <h2>How long would you like to focus?</h2>
             <div id="time_sel_cont">
                 <p>0 Min</p>
                 <p>120 Min</p>
@@ -54,20 +53,20 @@
 
 
             <button id="set_time_btn">Set Time</button>
-            <!-- User input for memes needed  -->
             </div>
 
     </section>
     <!-- Placeholder for user input for memes -->
     <section class="chooseMeme">
         <h2>Choose a "Cat"agory: </h2>
-        <button id="catBtn"> Cats </button>
-        <button id="dogBtn"> Dogs </button>
+        <button id="catBtn" value="cats"> Cats </button>
+        <button id="dogBtn" value="dogs"> Dogs </button>
     </section>
     <section id="countdown" class="section">
         <h3 id="time_display">_ _:_ _</h3>
-        <p id="plus_one">+1:00</p>
-        <i id="playBtn" class="fas fa-play"></i>
+        <!-- fas fa-play -->
+        <i id="playBtn" class="material-icons">play_circle_outline</i>
+        <i id="pauseBtn" class="material-icons">pause_circle_outline</i>
         <!-- 
         <div class="clock_container">
             <svg class="track_outline" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
