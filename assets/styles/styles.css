@@ -13,13 +13,14 @@
     font-family:monospace; 
 }
 
-.hide{
-    display: none;
-}
-
 #welcome{
     background-color: var(--dark); 
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 812px;
 } 
 
 /* Brain Breaks */
@@ -31,6 +32,10 @@ h1{
     color: var(--aqua); 
 }
 
+.welcome-text{
+    width: 300px;
+}
+
 .hide {
     display:none; 
 }
@@ -39,7 +44,10 @@ h1{
 }
 
 #entername{
-   padding: 30px;
+    background-color: white;
+    width: 300px;
+    color: var(--dark);
+    text-align: center;
 }
 #submitname {
     width: 100px;
@@ -122,29 +130,44 @@ background-color: var(--dark);
     
 }
 
-#playBtn{
+#playBtn, #pauseBtn{
     /* color: rgb(35, 224, 17); */
     font-size: 50px;
     position: absolute;
     bottom: 10%;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
+
+
 
 #plus_one{
     /* color: #fff; */
     font-size: 20px;
-    margin-top: 20px;
+    margin: 2rem 0;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 
 }
 
-#time_display{
-/* color: #fff; */
-}
+
 
 #time_display{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+/* #time_display{
     position: absolute;
     bottom: 50%;
     font-size: 50px;
-}
+} */
 
 
 
