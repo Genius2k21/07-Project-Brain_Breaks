@@ -206,3 +206,17 @@ background-color: var(--dark);
     margin-left: 25%;
 
 }
+
+/* ------------------------------------------------ */
+
+.meme_viewer{
+    height: 812px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide{
+    color: black;
+}
+
