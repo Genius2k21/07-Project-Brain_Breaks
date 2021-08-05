@@ -41,6 +41,30 @@ function getCatMemes() {
       });
   }
 }
+//this saves the user's choice into local storage 
+function setLocalStorage(event) {
+localStorage.setItem("User-Choice", event.target.value); 
+}
 
-catBtn.addEventListener("click", getCatMemes);
-dogBtn.addEventListener("click", getDogMemes);
+function getUserChoice(event) {
+  //this logs the value of the user's choice button 
+  var userChoice = event.target.value;
+  setLocalStorage(event); 
+  console.log(userChoice); 
+}
+
+var catBtn = document.querySelector('#catBtn');
+
+catBtn.addEventListener('click', function(event) {
+  getUserChoice(event);
+  getMeme();  
+});
+
+var dogBtn = document.querySelector('#dogBtn');
+
+dogBtn.addEventListener('click', function(event) {
+  getUserChoice(event); 
+  getMeme(); 
+});
+
+
