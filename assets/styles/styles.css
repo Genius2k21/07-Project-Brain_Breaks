@@ -9,9 +9,12 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 16px; 
-    background-color: var(--dark);
     color: var(--aqua); 
     font-family:monospace; 
+}
+
+.hide{
+    display: none;
 }
 
 #welcome{
@@ -50,6 +53,8 @@ h1{
     justify-content: center;
     flex-direction: column;
     align-items:center;
+    background-color: grey;
+
 }
 
 #time_sel_cont{
@@ -78,9 +83,18 @@ output{
 
 /* ------------------------------------------------ */
 
+.chooseMeme{
+height: 825px;
+background-color: var(--dark);
+}
+
+
+/* ------------------------------------------------ */
+
+
 #countdown{
     height: 812px;
-    background-color: whitesmoke;
+    background-color: grey;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,7 +124,8 @@ output{
 
 #plus_one{
     /* color: #fff; */
-    font-size: 40px;
+    font-size: 20px;
+    margin-top: 20px;
 
 }
 
