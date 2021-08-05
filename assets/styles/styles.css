@@ -209,7 +209,41 @@ background-color: var(--dark);
 
 }
 
+/* ------------------------------------------------ */
 
 .meme_viewer{
     height: 812px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark);
+}
+
+.swiper-slide{
+    color: black;
+    text-align: center;
+}
+
+.swiper-container {
+    width: 345px;
+    height: 812px;
+    background-color: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #test_1{
+      background-color: pink;
+
+  }
+
+#test_2{
+    background-color: rgba(112, 197, 112, 0.753);
+      
+  }
+
+  #test_3{
+    background-color: rgba(112, 180, 197, 0.753);
+      
 }
