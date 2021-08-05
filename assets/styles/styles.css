@@ -176,16 +176,19 @@ background-color: var(--dark);
 #break-page{
     background-color: aqua;
     height: 812px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #break-title{
     text-align: center;
     padding-top: 50px;
+    color: var(--dark);
 }
 
 #break-button{
-    margin-left: 36%;
-    margin-top: 10%;
     padding: 10px;
     border: white;
     border-radius: 5px;
@@ -196,13 +199,17 @@ background-color: var(--dark);
 #good-job{
     text-align: center;
     font-size: 20px;
-    margin-top: 10%;
+    color: var(--dark);
 
 }
 
 #break-img{
     width: 50%;
-    margin-top: 10%;
-    margin-left: 25%;
+    margin-bottom: 4rem;
 
+}
+
+
+.meme_viewer{
+    height: 812px;
 }
