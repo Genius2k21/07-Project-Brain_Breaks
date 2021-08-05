@@ -10,6 +10,7 @@
     box-sizing: border-box;
     font-size: 16px; 
     color: var(--aqua); 
+    font-family:monospace; 
 }
 
 .hide{
@@ -19,24 +20,16 @@
 #welcome{
     background-color: var(--dark); 
     text-align: center;
-    height: 812px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
 } 
 
+/* Brain Breaks */
 h1{
     text-align: center;
-    font-size: 3em; 
+    font-size: 2.5em; 
     font-family: 'Major Mono Display', monospace;
     text-shadow: 3px 3px 8px var(--aqua);
     color: var(--aqua); 
 }
-/* .welcome-text{
-    margin-top: 30px;
-    margin-bottom: 30px;
-} */
 
 .hide {
     display:none; 
