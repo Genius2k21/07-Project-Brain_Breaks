@@ -29,31 +29,31 @@
         <div class="EnterFullName">
 
             <h4>Enter your full name:</h4>
-                <form>
-                    <input type="text" id="entername"><br>
-                    <input type="submit" id="submitname" value="submit">
-                </form>
-                <h2 id="welcome-alert"></h2>
-            </div>
-        </section>
-        <section class="section" id="set_time">
-            <header>
-                <h2>How long would you like to focus?</h2>
-            </header>
-            <div id="time_sel_cont">
-                <p>0 Min</p>
-                <p>120 Min</p>
-            </div>
-            <input id="time_select" type="range" min="0" max="120" step="15"
-                oninput="this.nextElementSibling.value = this.value">
-            <output>_ _</output>
+            <form>
+                <input type="text" id="entername"><br>
+                <input type="submit" id="submitname" value="submit">
+            </form>
+            <h2 id="welcome-alert"></h2>
+        </div>
+    </section>
+    <section class="section" id="set_time">
+        <header>
+            <h2>How long would you like to focus?</h2>
+        </header>
+        <div id="time_sel_cont">
+            <p>0 Min</p>
+            <p>120 Min</p>
+        </div>
+        <input id="time_select" type="range" min="0" max="120" step="15"
+            oninput="this.nextElementSibling.value = this.value">
+        <output>_ _</output>
 
-            <h2>Total Break Time:</h2>
-            <p id="calc_break_time"></p>
+        <h2>Total Break Time:</h2>
+        <p id="calc_break_time"></p>
 
 
-            <button id="set_time_btn">Set Time</button>
-            </div>
+        <button id="set_time_btn">Set Time</button>
+        </div>
 
     </section>
     <!-- Placeholder for user input for memes -->
@@ -63,10 +63,11 @@
         <button id="dogBtn" value="dogs"> Dogs </button>
     </section>
     <section id="countdown" class="section">
-        <h3 id="time_display">_ _:_ _</h3>
+        <h3 unselectable="on" id="time_display">_ _:_ _</h3>
+        <p unselectable="on" id="plus_one">+1:00</p>
         <!-- fas fa-play -->
-        <i id="playBtn" class="material-icons">play_circle_outline</i>
-        <i id="pauseBtn" class="material-icons">pause_circle_outline</i>
+        <i unselectable="on" id="playBtn" class="material-icons">play_circle_outline</i>
+        <i unselectable="on" id="pauseBtn" class="material-icons">pause_circle_outline</i>
         <!-- 
         <div class="clock_container">
             <svg class="track_outline" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
