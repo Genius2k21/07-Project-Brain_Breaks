@@ -247,3 +247,35 @@ background-color: var(--dark);
     background-color: rgba(112, 180, 197, 0.753);
       
 }
+
+.progress-ring {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    /* Use this to control this circle's positioning */
+    transform: translate(-50%, -50%); 
+}
+.progress-ring_circle {
+    transition: 0.5s; 
+    transform: rotate(-90deg); 
+    transform-origin: 50% 50%; 
+    stroke: aqua; 
+    box-shadow: 2px 2px 5px aqua;
+}
+.danger {
+    stroke:red; 
+    animation: pulse 0.9s ease-in-out infinite; 
+}
+
+@keyframes pulse {
+    0%,  
+    100% {
+        transform: rotate(-90deg) scale(1); 
+    }   
+    50% {
+        transform: rotate(-90deg) scale(1.05); 
+    }
+    75% {
+        transform: rotate(-90deg) scale(0.8);  
+    }
+}
