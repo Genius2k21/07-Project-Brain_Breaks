@@ -14,7 +14,9 @@
 }
 
 #welcome{
-    background-color: var(--dark); 
+    background-color: var(--dark);
+    background-image: url(../Images/BrainPic.jpg);
+    background-size: cover;
     text-align: center;
     display: flex;
     flex-direction: column;
