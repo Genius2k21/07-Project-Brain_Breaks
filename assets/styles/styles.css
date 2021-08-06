@@ -56,7 +56,7 @@ h1{
 .entername:focus {
     text-shadow: 2px 2px 5px white;
 }
-.btn{
+.btn, #set_time_btn{
     margin-top: 50px;
     background-color: darkcyan;
     border: 2px white;
@@ -125,7 +125,6 @@ background-color: var(--dark);
 
 #countdown{
     height: 812px;
-    background-color: grey;
     display: flex;
     flex-direction: column;
     justify-content: center;
