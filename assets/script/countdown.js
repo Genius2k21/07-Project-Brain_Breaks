@@ -116,8 +116,6 @@ function countdown() {
     //when time reaches 0, clear timer 
     if (startingSeconds === 0) {
       timeDisplay.textContent = 0 + ":" + 0 + 0 + ":" + 0 + 0; 
-      import confetti from 'https://cdn.skypack.dev/canvas-confetti';
-      confetti();
       clearInterval(initial);
     }
   }, 1000)
@@ -144,3 +142,14 @@ function addMinute() {
 }
 
 plusOneMinute.addEventListener("click", addMinute);
+
+//add confetti drop 
+var confettiEl = document.getElementById("confetti"); 
+
+confettiEl.addEventListener("click", function() {
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 }
+  }); return; 
+}); 
