@@ -247,11 +247,10 @@ background-color: var(--dark);
     background-color: rgba(112, 180, 197, 0.753);
       
 }
-
-.progress-ring {
+.progress-ring { 
     position: absolute; 
     top: 50%; 
-    left: 50%; 
+    left: 50%;  
     /* Use this to control this circle's positioning */
     transform: translate(-50%, -50%); 
 }
@@ -260,7 +259,6 @@ background-color: var(--dark);
     transform: rotate(-90deg); 
     transform-origin: 50% 50%; 
     stroke: aqua; 
-    box-shadow: 2px 2px 5px aqua;
 }
 .danger {
     stroke:red; 
