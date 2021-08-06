@@ -184,12 +184,12 @@ background-color: var(--dark);
     align-items: center;
 }
 
-#deezer {
+#spotify {
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-between;
 }
-#deezer>iframe {
+#spotify>iframe {
     width: 200px; 
 }
 
