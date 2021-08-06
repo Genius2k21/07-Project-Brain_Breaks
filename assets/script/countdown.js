@@ -77,7 +77,7 @@ var startTimer = play.addEventListener("click", function() {
    
   paused = false; 
 }); 
-
+startingSeconds = 10; 
 function countdown() {
   initial = window.setInterval(function () {
     btn = localStorage.getItem("btn");
@@ -116,6 +116,8 @@ function countdown() {
     //when time reaches 0, clear timer 
     if (startingSeconds === 0) {
       timeDisplay.textContent = 0 + ":" + 0 + 0 + ":" + 0 + 0; 
+      import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+      confetti();
       clearInterval(initial);
     }
   }, 1000)

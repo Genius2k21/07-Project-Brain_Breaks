@@ -142,10 +142,6 @@ background-color: var(--dark);
     pointer-events: none;
 }
 
-.clock_container{
-    
-}
-
 #playBtn, #pauseBtn{
     /* color: rgb(35, 224, 17); */
     font-size: 50px;
@@ -170,22 +166,12 @@ background-color: var(--dark);
 
 }
 
-
-
 #time_display{
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
 }
-
-/* #time_display{
-    position: absolute;
-    bottom: 50%;
-    font-size: 50px;
-} */
-
-
 
 /* ------------------------------------------------ */
 
@@ -196,6 +182,15 @@ background-color: var(--dark);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#deezer {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#deezer>iframe {
+    width: 200px; 
 }
 
 #break-title{
