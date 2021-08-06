@@ -59,22 +59,16 @@ setTimeBtn.addEventListener("click", function() {
 }); 
 
 //when user clicks on play button, then countdown function is called 
-var startTimer = play.addEventListener("click", countdown); 
+var startTimer = play.addEventListener("click", function() {
+  countdown(); 
+   //hides the play button and shows the pause button 
+  play.classList.add("hide");
+  pause.classList.remove("hide");
+}); 
 
-var pauseTimer = pause.addEventListener("click", function() {
-  //hides the pause button and shows the resume button 
-  pause.classList.add("hide"); 
-  resume.classList.remove("hide"); 
-  //pauses the countdown timer 
-})
-
-startingSeconds = 10; 
-function countdown() {
+startingSeconds = 15; 
+function countdown(timer) {
   var timer = window.setInterval(function () {
-    //hides the play button and shows the pause button 
-    play.classList.add("hide");
-    pause.classList.remove("hide"); 
-
     //time is converted to seconds so interval can count down by seconds 
     var time = startingSeconds;
     //converts the remaining seconds to number of hours 
@@ -106,7 +100,35 @@ function countdown() {
   }, 1000)
 }
 
-//
+var pauseTimer = pause.addEventListener("click", function(timer) {
+  //hides the pause button and shows the resume button 
+  pause.classList.add("hide"); 
+  resume.classList.remove("hide"); 
+  //pauses the countdown timer 
+  var time = startingSeconds;
+    //converts the remaining seconds to number of hours 
+    var hours = Math.floor(time / 3600);
+    //what does this do???? 
+    // var secdiv = startingSeconds %= 3600;
+    // converts the remaining seconds to number of minutes  
+    var minutes = Math.floor(time / 60);
+    //converts the remaining seconds to number of seconds  
+    var seconds = time % 60;
+
+    //display countdown on screen 
+    timeDisplay.textContent = hours + ":" + minutes + ":" + seconds;
+
+    clearInterval(timer); 
+})
+
+var resumeTimer = resume.addEventListener("click", function() {
+   //hides the resume timer button and shows the pause button again 
+   resume.classList.add("hide");
+   pause.classList.remove("hide");
+   //resumes counting down 
+   countdown(); 
+})
+
 function addMinute() {
   console.log("add minute");
   startingSeconds = startingSeconds + 60;
