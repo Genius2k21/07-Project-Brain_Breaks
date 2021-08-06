@@ -1,5 +1,6 @@
 var play = document.querySelector("#playBtn");
 var pause = document.querySelector("#pauseBtn"); 
+var resume = document.querySelector("#resumeBtn"); 
 var outline = document.querySelector(".track_outline circle");
 var movingOutline = document.querySelector(".moving_outline circle");
 var addMinute = document.querySelector("#plus_one");
@@ -16,6 +17,7 @@ var formattedFocusTime = [];
 var formattedBreakTime = [];
 
 pause.classList.add("hide"); 
+resume.classList.add("hide"); 
 
 function setLocalStorage() {
 localStorage.setItem("focusTime", focusTime); 
@@ -56,37 +58,46 @@ setTimeBtn.addEventListener("click", function() {
   setLocalStorage(); 
 }); 
 
-startingSeconds = 5; 
-console.log(startingSeconds); 
-//when user clicks on play button, then ... 
+//when user clicks on play button, then countdown function is called 
 var startTimer = play.addEventListener("click", countdown); 
 
+var pauseTimer = pause.addEventListener("click", function() {
+  //hides the pause button and shows the resume button 
+  pause.classList.add("hide"); 
+  resume.classList.remove("hide"); 
+  //pauses the countdown timer 
+})
+
+startingSeconds = 10; 
 function countdown() {
-  timer = window.setInterval(function () {
+  var timer = window.setInterval(function () {
     //hides the play button and shows the pause button 
     play.classList.add("hide");
     pause.classList.remove("hide"); 
 
-    //time is converted to miliseconds so interval can count down by seconds 
-    let time = startingSeconds;
-    hours = Math.floor(time / 3600);
-    time %= 3600;
-    minutes = Math.floor(time / 60);
-    seconds = time % 60;
+    //time is converted to seconds so interval can count down by seconds 
+    var time = startingSeconds;
+    //converts the remaining seconds to number of hours 
+    var hours = Math.floor(time / 3600);
+    //what does this do???? 
+    // var secdiv = startingSeconds %= 3600;
+    // converts the remaining seconds to number of minutes  
+    var minutes = Math.floor(time / 60);
+    //converts the remaining seconds to number of seconds  
+    var seconds = time % 60;
 
     //seconds countdown by 1 
     startingSeconds--;
     
-    //if time is less than 10 seconds, then add an extra 0
-    // if (startingSeconds < 10) {
-    //   seconds = "0" + seconds;
-    // } else {
-    //   seconds;
-    // }
+    // if time is less than 10 seconds, then add an extra 0
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    } else {
+      seconds;
+    }
 
     //display countdown on screen 
-    timeDisplay.textContent = startingSeconds; 
-    // hours + ":" + minutes + ":" + seconds;
+    timeDisplay.textContent = hours + ":" + minutes + ":" + seconds;
     
     //when time reaches 0, clear timer 
     if (startingSeconds === 0) {
@@ -94,6 +105,8 @@ function countdown() {
     }
   }, 1000)
 }
+
+//
 function addMinute() {
   console.log("add minute");
   startingSeconds = startingSeconds + 60;
