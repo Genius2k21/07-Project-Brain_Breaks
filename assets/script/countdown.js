@@ -1,6 +1,6 @@
 var play = document.querySelector("#playBtn");
-var pause = document.querySelector("#pauseBtn"); 
-var resume = document.querySelector("#resumeBtn"); 
+var pause = document.getElementById("pauseBtn"); 
+var resume = document.getElementById("resumeBtn"); 
 var outline = document.querySelector(".track_outline circle");
 var movingOutline = document.querySelector(".moving_outline circle");
 var plusOneMinute = document.querySelector("#plus_one");
@@ -36,7 +36,7 @@ slider.addEventListener("change", function () {
   //this grabs the slider's value 
   var liveFocusTime = slider.value;
   //this calculates the user's breaktime 
-  breakTimeTextEl.innerText = Math.floor(liveFocusTime * 0.2);
+  breakTimeTextEl.textContent = Math.floor(liveFocusTime * 0.2);
 
   //saves both times into the empty arrays 
   breakTime = liveFocusTime * 0.2; 
