@@ -3,7 +3,7 @@ var pause = document.querySelector("#pauseBtn");
 var resume = document.querySelector("#resumeBtn"); 
 var outline = document.querySelector(".track_outline circle");
 var movingOutline = document.querySelector(".moving_outline circle");
-var addMinute = document.querySelector("#plus_one");
+var plusOneMinute = document.querySelector("#plus_one");
 var timeDisplay = document.querySelector("#time_display");
 var setTimeBtn = document.querySelector("#set_time_btn");
 var selectedTimeEl = document.querySelector("#selected_time");
@@ -141,4 +141,4 @@ function addMinute() {
   startingSeconds = startingSeconds + 60;
 }
 
-addMinute.addEventListener("click", addMinute);
+plusOneMinute.addEventListener("click", addMinute);
