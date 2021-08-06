@@ -10,6 +10,7 @@
     box-sizing: border-box;
     font-size: 16px; 
     color: var(--aqua); 
+    background-color: var(--dark); 
     font-family:monospace; 
 }
 .hide {
@@ -55,14 +56,14 @@ h1{
 .entername:focus {
     text-shadow: 2px 2px 5px white;
 }
-#submitname {
+.btn{
     margin-top: 50px;
     background-color: darkcyan;
     border: 2px white;
     border-radius: 10px;
 }
 
-#submitname:hover {
+.btn:hover {
     box-shadow: 0 0 30px var(--aqua);
     cursor: pointer;
 }
@@ -70,14 +71,11 @@ h1{
 
 #set_time{
     height: 812px;
-    background: #fff;
     display: flex;  
     justify-content: center;
     flex-direction: column;
     align-items:center;
-    background-color: grey;
     text-align: center;
-
 }
 
 #time_sel_cont{

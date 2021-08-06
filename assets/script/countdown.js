@@ -36,7 +36,7 @@ slider.addEventListener("change", function () {
   //this grabs the slider's value 
   var liveFocusTime = slider.value;
   //this calculates the user's breaktime 
-  breakTimeTextEl.innerText = liveFocusTime * 0.2;
+  breakTimeTextEl.innerText = Math.floor(liveFocusTime * 0.2);
 
   //saves both times into the empty arrays 
   breakTime = liveFocusTime * 0.2; 
