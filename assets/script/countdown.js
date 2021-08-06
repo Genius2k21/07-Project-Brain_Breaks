@@ -15,6 +15,8 @@ var breakTime = [];
 let startingSeconds = [];
 var formattedFocusTime = [];
 var formattedBreakTime = [];
+var paused; 
+var initial; 
 
 //saves timer state into local storage
 localStorage.setItem("btn", "focus");
@@ -82,8 +84,9 @@ var startTimer = play.addEventListener("click", function() {
 }); 
 
 startingSeconds = 15; 
-function countdown(timer) {
-  var timer = window.setInterval(function () {
+function countdown() {
+  initial = window.setInterval(function () {
+    let btn = localStorage.getItem("btn");
     //time is converted to seconds so interval can count down by seconds 
     var time = startingSeconds;
     //converts the remaining seconds to number of hours 
@@ -104,36 +107,40 @@ function countdown(timer) {
     } else {
       seconds;
     }
+    
+    //adds an extra 0 for minutes 
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    } else {
+      minutes;
+    }
+
 
     //display countdown on screen 
     timeDisplay.textContent = hours + ":" + minutes + ":" + seconds;
     
     //when time reaches 0, clear timer 
     if (startingSeconds === 0) {
-      clearInterval(timer);
+      timeDisplay.textContent = 0 + ":" + 0 + 0 + ":" + 0 + 0; 
+      clearInterval(initial);
     }
   }, 1000)
 }
 
 var pauseTimer = pause.addEventListener("click", function(timer) {
-  //hides the pause button and shows the resume button 
-  pause.classList.add("hide"); 
-  resume.classList.remove("hide"); 
-  //pauses the countdown timer 
-  var time = startingSeconds;
-    //converts the remaining seconds to number of hours 
-    var hours = Math.floor(time / 3600);
-    //what does this do???? 
-    //time %= 3600;
-    // converts the remaining seconds to number of minutes  
-    var minutes = Math.floor(time / 60);
-    //converts the remaining seconds to number of seconds  
-    var seconds = time % 60;
+if (paused) {
+    paused = false; 
+    initial = setInterval("countdown()", 1000);  
+    pause.classList.remove("hide"); 
+    resume.classList.add("hide");   
+} else {
+    clearInterval(initial); 
+    //hides the pause button and shows the resume button 
+    pause.classList.add("hide"); 
+    resume.classList.remove("hide"); 
+    paused = true; 
+}
 
-    //display countdown on screen 
-    timeDisplay.textContent = hours + ":" + minutes + ":" + seconds;
-
-    clearInterval(timer); 
 })
 
 var resumeTimer = resume.addEventListener("click", function() {
