@@ -12,6 +12,13 @@
     color: var(--aqua); 
     font-family:monospace; 
 }
+.hide {
+    display:none; 
+}
+
+.show {
+    display:block; 
+}
 
 #welcome{
     background-color: var(--dark);
@@ -32,30 +39,29 @@ h1{
     color: var(--aqua); 
 }
 
-.welcome-text{
-    width: 300px;
-}
-
-.hide {
-    display:none; 
-}
-.show {
-    display:block; 
-}
-
-#entername{
-    background-color: white;
-    width: 300px;
-    color: var(--dark);
+#welcome-alert{
+    justify-content: center;
+    width: 350px;
     text-align: center;
+    margin: 40px 0; 
+}
+
+.entername{
+    font-family: monospace; 
+    color: white;
+    text-align: center;
+}
+
+.entername:focus {
+    text-shadow: 2px 2px 5px white;
 }
 #submitname {
     margin-top: 50px;
     background-color: darkcyan;
     border: 2px white;
     border-radius: 10px;
-    font-size: 15px;
 }
+
 #submitname:hover {
     box-shadow: 0 0 30px var(--aqua);
     cursor: pointer;
