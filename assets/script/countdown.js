@@ -56,9 +56,13 @@ setTimeBtn.addEventListener("click", function() {
   setLocalStorage(); 
 }); 
 
+startingSeconds = 5; 
+console.log(startingSeconds); 
 //when user clicks on play button, then ... 
-var startTimer = play.addEventListener("click", () =>
-  window.setInterval(function () {
+var startTimer = play.addEventListener("click", countdown); 
+
+function countdown() {
+  timer = window.setInterval(function () {
     //hides the play button and shows the pause button 
     play.classList.add("hide");
     pause.classList.remove("hide"); 
@@ -70,24 +74,26 @@ var startTimer = play.addEventListener("click", () =>
     minutes = Math.floor(time / 60);
     seconds = time % 60;
 
-    //if time is less than 10 seconds, then add an extra 0
-    if (seconds < 10) {
-      seconds = "0" + seconds;
-    } else {
-      seconds;
-    }
-
-    //display countdown on screen 
-    timeDisplay.textContent = hours + ":" + minutes + ":" + seconds;
     //seconds countdown by 1 
     startingSeconds--;
+    
+    //if time is less than 10 seconds, then add an extra 0
+    // if (startingSeconds < 10) {
+    //   seconds = "0" + seconds;
+    // } else {
+    //   seconds;
+    // }
+
+    //display countdown on screen 
+    timeDisplay.textContent = startingSeconds; 
+    // hours + ":" + minutes + ":" + seconds;
+    
     //when time reaches 0, clear timer 
-    if (time == 0) {
-      clearInterval(startTimer);
+    if (startingSeconds === 0) {
+      clearInterval(timer);
     }
   }, 1000)
-);
-
+}
 function addMinute() {
   console.log("add minute");
   startingSeconds = startingSeconds + 60;
