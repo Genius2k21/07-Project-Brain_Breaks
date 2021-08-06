@@ -14,7 +14,9 @@
 }
 
 #welcome{
-    background-color: var(--dark); 
+    background-color: var(--dark);
+    background-image: url(../Images/BrainPic.jpg);
+    background-size: cover;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -222,6 +224,9 @@ background-color: var(--dark);
 .swiper-slide{
     color: black;
     text-align: center;
+    background-color: #242424;
+    display: flex;
+    align-items: center;
 }
 
 .swiper-container {
