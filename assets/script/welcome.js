@@ -1,13 +1,13 @@
-const getName = document.querySelector('#entername');
+const getName = document.querySelector('.entername');
 const submitBtn = document.querySelector('#submitname');
-const form = document.querySelector('form');
+const input = document.querySelector('input');
 const h2 = document.getElementById("welcome-alert"); 
 
 //global variable for user name input 
 var userName; 
 
 
-form.addEventListener('submit', function(event){
+input.addEventListener('submit', function(event){
     event.preventDefault();
 });
 
@@ -25,8 +25,9 @@ submitBtn.addEventListener('click', function(){
 function displayName(){
     if(localStorage.getItem('name')){
         const name = localStorage.getItem('name');
-        h2.textContent = `Welcome ${name}!`;
+        h2.textContent = `Welcome ${name}! Our goal is to help you make the most out of your hectic workday with this
+        timer. We hope you enjoy!`; 
     }
 }
 
-document.body.onload = displayName;
+// document.body.onload = displayName;

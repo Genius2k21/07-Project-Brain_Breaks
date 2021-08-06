@@ -12,11 +12,16 @@
     color: var(--aqua); 
     font-family:monospace; 
 }
+.hide {
+    display:none; 
+}
+
+.show {
+    display:block; 
+}
 
 #welcome{
     background-color: var(--dark);
-    background-image: url(../Images/BrainPic.jpg);
-    background-size: cover;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -34,32 +39,32 @@ h1{
     color: var(--aqua); 
 }
 
-.welcome-text{
-    width: 300px;
+#welcome-alert{
+    justify-content: center;
+    width: 350px;
+    text-align: center;
+    margin: 40px 0; 
 }
 
-.hide {
-    display:none; 
-}
-.show {
-    display:block; 
-}
-
-#entername{
-    background-color: white;
-    width: 300px;
-    color: var(--dark);
+.entername{
+    font-family: monospace; 
+    color: white;
     text-align: center;
 }
+
+.entername:focus {
+    text-shadow: 2px 2px 5px white;
+}
 #submitname {
-    width: 100px;
-    height: 50px;
     margin-top: 50px;
     background-color: darkcyan;
     border: 2px white;
     border-radius: 10px;
-    font-size: 15px;
-    box-shadow: 0 0 30px #85cf6d;
+}
+
+#submitname:hover {
+    box-shadow: 0 0 30px var(--aqua);
+    cursor: pointer;
 }
 /* ------------------------------------------------ */
 
