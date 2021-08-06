@@ -1,11 +1,12 @@
 var dogUrl = "https://www.reddit.com/r/dogmemes/random.json";
 var catBtn = document.querySelector("#catBtn");
 var dogBtn = document.querySelector("#dogBtn");
+var swiperWrapper = document.querySelector(".swiper-wrapper");
 
 memeBank = [];
 
 function getDogMemes() {
-  for (i = 0; i < 10; i++) {
+  for (i = 0; i < 100; i++) {
     fetch("https://www.reddit.com/r/dogmemes/random.json")
       .then(function (response) {
         if (!response.ok) {
@@ -19,16 +20,22 @@ function getDogMemes() {
         ) {
           console.log("bad link");
         } else {
-          console.log(data[0].data.children[0].data.url_overridden_by_dest);
-          memeBank.push(data[0].data.children[0].data.url_overridden_by_dest);
+          var stringURL = data[0].data.children[0].data.url_overridden_by_dest;
+          // console.log(src);
+          var divEl = document.createElement("div");
+          divEl.classList.add("swiper-slide");
+          console.log(divEl);
+          divEl.innerHTML =
+            '<img src="' + stringURL + '" width="' + screen.width + '">';
+          swiperWrapper.appendChild(divEl);
         }
-        console.log(memeBank);
+        // console.log(memeBank);
       });
   }
 }
 
 function getCatMemes() {
-  for (i = 0; i < 10; i++) {
+  for (i = 0; i < 100; i++) {
     fetch("https://www.reddit.com/r/Catmemes/random.json")
       .then(function (response) {
         if (!response.ok) {
@@ -38,18 +45,23 @@ function getCatMemes() {
       })
       .then(function (data) {
         if (
-          !data[0].data.children[0].data.url_overridden_by_dest.includes(".jpg") ||
-          !data[0].data.children[0].data.url_overridden_by_dest.includes(".png") ||
-          !data[0].data.children[0].data.url_overridden_by_dest.includes(".jpeg")
+          data[0].data.children[0].data.url_overridden_by_dest.includes("www")
         ) {
           console.log("bad link");
         } else {
-          
+          var stringURL = data[0].data.children[0].data.url_overridden_by_dest;
+          // console.log(src);
+          var divEl = document.createElement("div");
+          divEl.classList.add("swiper-slide");
+          console.log(divEl);
+          divEl.innerHTML = '<img src="' + stringURL + '" width="' + 342 + '">';
+          swiperWrapper.appendChild(divEl);
         }
-        console.log(memeBank);
+        // console.log(memeBank);
       });
   }
 }
+
 catBtn.addEventListener("click", getCatMemes);
 
 dogBtn.addEventListener("click", getDogMemes);
