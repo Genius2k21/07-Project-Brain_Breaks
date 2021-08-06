@@ -176,7 +176,7 @@ background-color: var(--dark);
 /* ------------------------------------------------ */
 
 #break-page{
-    background-color: aqua;
+    background-color: var(--aqua); 
     height: 812px;
     display: flex;
     flex-direction: column;
