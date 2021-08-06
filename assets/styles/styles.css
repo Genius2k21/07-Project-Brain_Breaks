@@ -273,9 +273,40 @@ background-color: var(--dark);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0,1), 0 6px 6px rgba(0,0,0,0,1);
     color: #fff;
-    font-size: 16px
+    font-size: 16px;
     padding: 14px 40px;
 }
-btn:active{
+.btn:active{
     transform: scale(0.98); 
+}
+.progress-ring {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    /* Use this to control this circle's positioning */
+    transform: translate(-50%, -50%); 
+}
+.progress-ring_circle {
+    transition: 0.5s; 
+    transform: rotate(-90deg); 
+    transform-origin: 50% 50%; 
+    stroke: aqua; 
+    box-shadow: 2px 2px 5px aqua;
+}
+.danger {
+    stroke:red; 
+    animation: pulse 0.9s ease-in-out infinite; 
+}
+
+@keyframes pulse {
+    0%,  
+    100% {
+        transform: rotate(-90deg) scale(1); 
+    }   
+    50% {
+        transform: rotate(-90deg) scale(1.05); 
+    }
+    75% {
+        transform: rotate(-90deg) scale(0.8);  
+    }
 }
