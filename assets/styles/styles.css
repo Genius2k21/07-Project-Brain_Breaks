@@ -15,8 +15,6 @@
 
 #welcome{
     background-color: var(--dark);
-    background-image: url(../Images/BrainPic.jpg);
-    background-size: cover;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -52,14 +50,15 @@ h1{
     text-align: center;
 }
 #submitname {
-    width: 100px;
-    height: 50px;
     margin-top: 50px;
     background-color: darkcyan;
     border: 2px white;
     border-radius: 10px;
     font-size: 15px;
-    box-shadow: 0 0 30px #85cf6d;
+}
+#submitname:hover {
+    box-shadow: 0 0 30px var(--aqua);
+    cursor: pointer;
 }
 /* ------------------------------------------------ */
 
