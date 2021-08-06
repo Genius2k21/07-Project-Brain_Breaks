@@ -67,9 +67,9 @@ catBtn.addEventListener("click", getCatMemes);
 dogBtn.addEventListener("click", getDogMemes);
 
 //this saves the user's choice into local storage
-function setLocalStorage(event) {
-  localStorage.setItem("User-Choice", event.target.value);
-}
+// function setLocalStorage(event) {
+//   localStorage.setItem("User-Choice", event.target.value);
+// }
 
 function getUserChoice(event) {
   //this logs the value of the user's choice button
