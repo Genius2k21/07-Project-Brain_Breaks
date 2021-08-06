@@ -13,6 +13,7 @@
     background-color: var(--dark); 
     font-family:monospace; 
 }
+
 .hide {
     display:none; 
 }
@@ -21,15 +22,12 @@
     display:block; 
 }
 
-#welcome{
-    background-color: var(--dark);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 812px;
-} 
+.section {
+    height: 812px; 
+    width: 375px; 
+    text-align: center; 
+    border: 1px solid white; 
+}
 
 /* Brain Breaks */
 h1{
