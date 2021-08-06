@@ -16,12 +16,16 @@ let startingSeconds = [];
 var formattedFocusTime = [];
 var formattedBreakTime = [];
 
+//saves timer state into local storage
+localStorage.setItem("btn", "focus");
+
+//hides both the pause and resume timer buttons 
 pause.classList.add("hide"); 
 resume.classList.add("hide"); 
 
 function setLocalStorage() {
 localStorage.setItem("focusTime", focusTime); 
-localStorage.setItem("breakTime", breakTime); 
+localStorage.setItem("breakTime", breakTime);  
 }
 
 //adds event listener to the slider 
@@ -64,6 +68,17 @@ var startTimer = play.addEventListener("click", function() {
    //hides the play button and shows the pause button 
   play.classList.add("hide");
   pause.classList.remove("hide");
+
+  //gets the current state of the timer focused or break 
+  let btn = localStorage.getItem("btn"); 
+   
+  paused = false; 
+    //+ converts the localstorage string to a number 
+    if (btn === "focus") {
+        startingSeconds = +localStorage.getItem("focusTime"); 
+    } else {
+        startingSeconds = +localStorage.getItem("breakTime"); 
+    }
 }); 
 
 startingSeconds = 15; 
@@ -109,7 +124,7 @@ var pauseTimer = pause.addEventListener("click", function(timer) {
     //converts the remaining seconds to number of hours 
     var hours = Math.floor(time / 3600);
     //what does this do???? 
-    // var secdiv = startingSeconds %= 3600;
+    //time %= 3600;
     // converts the remaining seconds to number of minutes  
     var minutes = Math.floor(time / 60);
     //converts the remaining seconds to number of seconds  
