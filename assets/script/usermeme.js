@@ -38,12 +38,13 @@ function getCatMemes() {
       })
       .then(function (data) {
         if (
-          data[0].data.children[0].data.url_overridden_by_dest.includes("www")
+          !data[0].data.children[0].data.url_overridden_by_dest.includes(".jpg") ||
+          !data[0].data.children[0].data.url_overridden_by_dest.includes(".png") ||
+          !data[0].data.children[0].data.url_overridden_by_dest.includes(".jpeg")
         ) {
           console.log("bad link");
         } else {
-          console.log(data[0].data.children[0].data.url_overridden_by_dest);
-          memeBank.push(data[0].data.children[0].data.url_overridden_by_dest);
+          
         }
         console.log(memeBank);
       });
