@@ -78,7 +78,6 @@ var startTimer = play.addEventListener("click", function() {
   paused = false; 
 }); 
 
-startingSeconds = 15; 
 function countdown() {
   initial = window.setInterval(function () {
     btn = localStorage.getItem("btn");
