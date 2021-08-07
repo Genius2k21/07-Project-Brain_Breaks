@@ -45,10 +45,10 @@
             <h4>How long would you like to focus?</h4>
         </header>
         <div id="time_sel_cont">
-            <p>0 Min</p>
-            <p>120 Min</p>
+            <p id="time_sel_cont_min">0 Min</p>
+            <p id="time_sel_cont_max">120 Min</p>
         </div>
-        <input id="time_select" type="range" min="0" max="120" step="10"
+        <input id="time_select" type="range" min="0" max="120" step="5"
             oninput="this.nextElementSibling.value = this.value"/>
         <output class="row" id="focus-time"></output>
 
