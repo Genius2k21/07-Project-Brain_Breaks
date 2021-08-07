@@ -13,6 +13,7 @@
     background-color: var(--dark); 
     font-family:monospace; 
 }
+
 .hide {
     display:none; 
 }
@@ -21,29 +22,26 @@
     display:block; 
 }
 
-#welcome{
-    background-color: var(--dark);
-    text-align: center;
-    display: flex;
+.section {
+    height: 812px; 
+    width: 375px; 
+    text-align: center; 
+    border: 1px solid white; 
+    display:flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 812px;
-} 
+}
 
 /* Brain Breaks */
 h1{
-    text-align: center;
     font-size: 2.5em; 
     font-family: 'Major Mono Display', monospace;
     text-shadow: 3px 3px 8px var(--aqua);
     color: var(--aqua); 
 }
-
+/* -------------Welcome Page--------------- */
 #welcome-alert{
-    justify-content: center;
-    width: 350px;
-    text-align: center;
     margin: 40px 0; 
 }
 
@@ -56,8 +54,9 @@ h1{
 .entername:focus {
     text-shadow: 2px 2px 5px white;
 }
-.btn, #set_time_btn{
-    margin-top: 50px;
+
+.btn {
+    margin: 10px; 
     background-color: darkcyan;
     border: 2px white;
     border-radius: 10px;
@@ -67,27 +66,21 @@ h1{
     box-shadow: 0 0 30px var(--aqua);
     cursor: pointer;
 }
-/* ------------------------------------------------ */
+/* --------------Set Timer Page----------------- */
 
-#set_time{
-    height: 812px;
-    display: flex;  
-    justify-content: center;
-    flex-direction: column;
-    align-items:center;
-    text-align: center;
-}
-
-#time_sel_cont{
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+#time_sel_cont>p{
+    display:inline; 
+     
 }
 
 #focus-time, #calc_break_time {
     color: white; 
     text-shadow: 2px 2px 5px white;
+}
+
+output {
+    display:block; 
+    width: 100%;  
 }
 
 #set_time_btn{
@@ -96,7 +89,7 @@ h1{
 }
 
 #time_select{
-    width: 300px;
+    width: 300px; 
 }
 
 #selected_time{
@@ -112,7 +105,7 @@ output{
     font-size: 1.5em;
 }
 
-/* ------------------------------------------------ */
+/* --------------Choose Category Page-------------- */
 
 .chooseMeme{
 height: 825px;
@@ -120,7 +113,7 @@ background-color: var(--dark);
 }
 
 
-/* ------------------------------------------------ */
+/* ---------------Timer Page--------------- */
 
 
 #countdown{
@@ -154,8 +147,6 @@ background-color: var(--dark);
 }
 
 #playBtn, #pauseBtn {
-    position: absolute;
-    bottom: 10%;
     font-size: 50px; 
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
@@ -164,8 +155,6 @@ background-color: var(--dark);
 }
 
 #resumeBtn {
-    position: absolute;
-    bottom: 10%;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
@@ -195,50 +184,35 @@ background-color: var(--dark);
 
 #break-page{
     background-color: var(--aqua); 
-    height: 812px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-#spotify {
+/* #spotify {
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-between;
-}
+} */
 #spotify>iframe {
-    width: 200px; 
+    /* width: 200px;  */
 }
-
-#break-title{
-    text-align: center;
-    padding-top: 50px;
-    color: var(--dark);
-}
-
-#break-button{
-    padding: 10px;
-    border: white;
-    border-radius: 5px;
-    background-color: darkcyan;
-    
+#break-page {
+    background-color: var(--aqua);
 }
 
 #good-job{
-    text-align: center;
     font-size: 20px;
     color: var(--dark);
+    background-color: var(--aqua);
 
 }
-
 #break-img{
-    width: 50%;
-    margin-bottom: 4rem;
-
+    width: 50%; 
+    box-shadow: 2px 2px 5px black;
 }
 
-/* ------------------------------------------------ */
+#break-button:hover, #confetti:hover {
+    box-shadow: 2px 2px 5px var(--dark);
+}
+/* --------------Meme Page------------------- */
 
 .meme_viewer{
     height: 812px;
