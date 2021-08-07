@@ -9,6 +9,8 @@ var setTimeBtn = document.querySelector("#set_time_btn");
 var selectedTimeEl = document.querySelector("#selected_time");
 var slider = document.querySelector("#time_select");
 var breakTimeTextEl = document.querySelector("#calc_break_time");
+var brainBreakPage = document.getElementById("break-page");
+var focusTimerPage = document.getElementById("countdown"); 
 
 var focusTime; 
 var breakTime; 
@@ -116,7 +118,8 @@ function countdown() {
     //when time reaches 0, clear timer 
     if (startingSeconds === 0) {
       timeDisplay.textContent = 0 + ":" + 0 + 0 + ":" + 0 + 0; 
-      clearInterval(initial);
+      clearInterval(initial); 
+      runConfetti(); 
     }
   }, 1000)
 }
@@ -143,13 +146,14 @@ function addMinute() {
 
 plusOneMinute.addEventListener("click", addMinute);
 
-//add confetti drop 
-var confettiEl = document.getElementById("confetti"); 
-
-confettiEl.addEventListener("click", function() {
-  confetti({
-    particleCount: 100,
-    spread: 70,
-    origin: { y: 0.6 }
-  }); return; 
-}); 
+//add confetti drop  
+function runConfetti() {
+  confetti(); 
+  brainBreakPage.classList.remove("hide"); 
+  focusTimerPage.classList.add("hide");
+}
+confetti({
+  particleCount: 100,
+  spread: 70,
+  origin: { y: 0.6 }
+});

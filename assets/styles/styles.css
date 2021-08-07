@@ -17,6 +17,9 @@
 .hide {
     display:none; 
 }
+/* .disappear {
+    transition: display 4s; 
+} */
 
 .show {
     display:block; 
