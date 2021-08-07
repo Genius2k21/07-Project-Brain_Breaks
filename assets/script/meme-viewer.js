@@ -1,7 +1,8 @@
-const swiper = new Swiper(".swiper-container", {
-  // Optional parameters
-  direction: "vertical",
+mySwiper = new Swiper('.swiper-container', {
+	direction: "vertical",
   loop: false,
+  observer: true,
+  observeParents: true,
 
   // If we need pagination
   pagination: {
@@ -14,4 +15,9 @@ const swiper = new Swiper(".swiper-container", {
   scrollbar: {
     el: ".swiper-scrollbar",
   },
-});
+
+})
+
+setTimeout(() => {
+	mySwiper.update()
+}, 500)

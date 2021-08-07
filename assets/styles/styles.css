@@ -208,7 +208,9 @@ output{
     background-color: #242424;
     display: flex;
     align-items: center;
+    
 }
+
 
 .swiper-container {
     width: 345px;
