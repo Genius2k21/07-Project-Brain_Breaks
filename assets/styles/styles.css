@@ -122,6 +122,7 @@ output{
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
 }
+
 #playBtn:hover, #pauseBtn:hover, #resumeBtn:hover {
     cursor: pointer;
     text-shadow: 2px 2px 5px var(--aqua);
@@ -213,12 +214,10 @@ output{
 
   #test_1{
       background-color: pink;
-
   }
 
 #test_2{
-    background-color: rgba(112, 197, 112, 0.753);
-      
+    background-color: rgba(112, 197, 112, 0.753);   
   }
 
   #test_3{
