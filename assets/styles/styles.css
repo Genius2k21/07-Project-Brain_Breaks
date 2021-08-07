@@ -23,7 +23,7 @@
 }
 
 .section {
-    height: 812px; 
+    height: 100%; 
     width: 375px; 
     text-align: center; 
     border: 1px solid white; 
@@ -225,3 +225,8 @@ output{
       
 }
 
+@media screen and (min-width: 768px) {
+    .section {
+        width: 700px; 
+    }
+}
