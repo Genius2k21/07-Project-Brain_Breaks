@@ -107,32 +107,13 @@ output{
 
 /* --------------Choose Category Page-------------- */
 
-.chooseMeme{
-height: 825px;
-background-color: var(--dark);
-}
-
-
 /* ---------------Timer Page--------------- */
 
-
-#countdown{
-    height: 812px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-#countdown svg{
-    position: absolute;
-    height: 40%;
-    top:50%;
-    left: 50%;
+#countdown svg{ 
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
+
 #plus_one {
     border: 1px solid white; 
     color: white; 
@@ -172,27 +153,26 @@ background-color: var(--dark);
     user-select: none; /* Standard */
 
 }
-
 #time_display{
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
 }
-
-/* ------------------------------------------------ */
+#spotify {
+    overflow-y:scroll; 
+    margin-top: 50px; 
+}
+#spotify>iframe {
+    margin-top: 10px; 
+    height: 200px; 
+    border:1px solid white;  
+    box-shadow: 3px 3px 8px black;
+}
+/* ---------------Break Page----------------- */
 
 #break-page{
     background-color: var(--aqua); 
-}
-
-/* #spotify {
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: space-between;
-} */
-#spotify>iframe {
-    /* width: 200px;  */
 }
 #break-page {
     background-color: var(--aqua);
