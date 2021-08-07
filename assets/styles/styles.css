@@ -114,44 +114,36 @@ output{
     pointer-events: none;
 }
 
-#plus_one {
-    border: 1px solid white; 
-    color: white; 
-    border-radius: 10px;
-    padding: 5px; 
-}
-
-#plus_one:hover {
-    cursor: pointer;
-    box-shadow: 2px 2px 5px white;
-    text-shadow: 2px 2px 5px white;
-}
-
-#playBtn, #pauseBtn {
+#playBtn, #pauseBtn, #resumeBtn {
     font-size: 50px; 
+    color: var(--aqua); 
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
 }
-
-#resumeBtn {
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
+#playBtn:hover, #pauseBtn:hover, #resumeBtn:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 5px var(--aqua);
 }
-
 
 #plus_one{
     /* color: #fff; */
-    font-size: 20px;
+    font-size: 40px;
+    border: 1px solid white; 
+    color: white; 
+    border-radius: 25px;
+    padding: 5px;
     margin: 2rem 0;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
-
+}
+#plus_one:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 5px white;
+    text-shadow: 2px 2px 5px white;
 }
 #time_display{
     -webkit-user-select: none; /* Safari */        
