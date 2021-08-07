@@ -23,23 +23,21 @@
 </head>
 
 <body>
-    <section class="center section row" id="welcome">
+    <section class="section row" id="welcome">
         <!-- Welcome Page  -->
         <h1>Brain Breaks</h1>
         <div>
             <h4>Enter your name:</h4>
             <form>
-                <div class="row">
-                    <div class="input-field">
-                      <input class="entername" placeholder="name" id="first_name2" type="text" class="validate">
-                    </div>
-                  </div>
+                <div class="input-field">
+                    <input class="entername" placeholder="name" id="first_name2" type="text" class="validate">
+                </div>
                 <a class="waves-effect waves-light btn" id="submitname" value="submit">Save</a>
             </form>
             <p id="welcome-alert"></p>
         </div>
     </section>
-<!-- Set Time Screen  -->
+<!-- Set Timer Page-->
     <section class="section row" id="set_time">
         <header>
             <h4>How long would you like to focus?</h4>
@@ -49,8 +47,8 @@
             <p>120 Min</p>
         </div>
         <input id="time_select" type="range" min="0" max="120" step="1"
-            oninput="this.nextElementSibling.value = this.value">
-        <output id="focus-time"></output>
+            oninput="this.nextElementSibling.value = this.value"/>
+        <output class="row" id="focus-time"></output>
 
         <h4>Total Break Time:</h4>
         <p id="calc_break_time"></p>
@@ -78,7 +76,7 @@
         </span>
         </div>
     </section>
-    <section class="section" id="break-page">
+    <section class="section row cetner" id="break-page">
         <!-- Brain Break Page WHOOOO!!!  -->
         <div id="spotify">
             <iframe src="https://open.spotify.com/embed/playlist/6wONrqCy61HTmwigBUo8e6" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>

@@ -27,21 +27,20 @@
     width: 375px; 
     text-align: center; 
     border: 1px solid white; 
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Brain Breaks */
 h1{
-    text-align: center;
     font-size: 2.5em; 
     font-family: 'Major Mono Display', monospace;
     text-shadow: 3px 3px 8px var(--aqua);
     color: var(--aqua); 
 }
-
+/* -------------Welcome Page--------------- */
 #welcome-alert{
-    justify-content: center;
-    width: 350px;
-    text-align: center;
     margin: 40px 0; 
 }
 
@@ -54,6 +53,7 @@ h1{
 .entername:focus {
     text-shadow: 2px 2px 5px white;
 }
+
 .btn, #set_time_btn{
     margin-top: 50px;
     background-color: darkcyan;
@@ -65,19 +65,9 @@ h1{
     box-shadow: 0 0 30px var(--aqua);
     cursor: pointer;
 }
-/* ------------------------------------------------ */
-
-#set_time{
-    height: 812px;
-    display: flex;  
-    justify-content: center;
-    flex-direction: column;
-    align-items:center;
-    text-align: center;
-}
+/* --------------Set Timer Page----------------- */
 
 #time_sel_cont{
-    width: 90%;
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -86,6 +76,11 @@ h1{
 #focus-time, #calc_break_time {
     color: white; 
     text-shadow: 2px 2px 5px white;
+}
+
+output {
+    display:block; 
+    width: 100%;  
 }
 
 #set_time_btn{
