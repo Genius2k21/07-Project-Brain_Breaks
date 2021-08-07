@@ -163,14 +163,16 @@ output{
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
 }
-#spotify {
-    overflow-y:scroll; 
+#youtube {
     margin-top: 50px; 
 }
-#spotify>iframe {
+#youtube>iframe {
     margin-top: 10px; 
     height: 200px; 
     border:1px solid white;  
+
+    box-shadow: 3px 3px 8px black;
+    visibility: hidden;
     box-shadow: 0px 0px 12px black;
 }
 /* ---------------Break Page----------------- */
@@ -232,6 +234,50 @@ output{
     background-color: rgba(112, 197, 112, 0.753);   
 }
 
+/*  */
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  /* Rounded sliders */
+  
 #test_3{
     background-color: rgba(112, 180, 197, 0.753); 
 }
