@@ -18,13 +18,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>Brain Breaks</title>
+    <!-- Swiper JS Link  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     
 </head>
 
 <body>
+<!-- Welcome Page  -->
     <section class="section row" id="welcome">
-        <!-- Welcome Page  -->
         <h1>Brain Breaks</h1>
         <div>
             <h4>Enter your name:</h4>
@@ -54,41 +55,40 @@
         <p id="calc_break_time"></p>
 
         <a class="waves-effect waves-light btn" id="set_time_btn" value="submit">Set Time</a>
-        </div>
+    </section>
 
-    </section>
-    <!-- Placeholder for user input for memes -->
+<!--Choose Meme Page-->
     <section class="chooseMeme section row">
-        <h2>Choose a "Cat"agory: </h2>
-        <button id="catBtn" value="cats"> Cats </button>
-        <button id="dogBtn" value="dogs"> Dogs </button>
+        <h4>Choose a Category: </h4>
+        <button id="catBtn" class="btn" value="cats"> Cats </button>
+        <button id="dogBtn" class="btn" value="dogs"> Dogs </button>
     </section>
-    <section id="countdown" class="section">
-        
+
+<!-- Timer Page  -->
+    <section id="countdown" class="section row">
         <h3 unselectable="on" id="time_display">_ _ : _ _</h3>
         <p unselectable="on" id="plus_one">+1:00</p>
-        <!-- fas fa-play -->
         <i unselectable="on" id="playBtn" class="material-icons">play_circle_outline</i>
         <i unselectable="on" id="pauseBtn" class="material-icons">pause_circle_outline</i>
         <a class="waves-effect waves-light btn" id="resumeBtn" value="submit">Resume Timer</a>
-        <span>
-
-        </span>
-        </div>
     </section>
-    <section class="section row cetner" id="break-page">
-        <!-- Brain Break Page WHOOOO!!!  -->
+
+<!-- Brain Break Page WHOOOO!!!  -->
+    <section class="section row" id="break-page">
         <div id="spotify">
             <iframe src="https://open.spotify.com/embed/playlist/6wONrqCy61HTmwigBUo8e6" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             <iframe src="https://open.spotify.com/embed/playlist/0vvXsWCC9xrXsKd4FyS8kM" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9sIqqvKsjG8" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
+    </section>
+
+<!-- Take a Break Page -->
+    <section id="break-page" class="section row">
         <h2 id="good-job">Good Job! Now take a Break!</h2>
-        <button id="confetti">Confetti</button>
+        <button class="btn" id="confetti">Confetti</button>
         <img src="./assets/Images/guess-what-its-break-time.jpeg" id="break-img">
 
-        <button onclick="snd.play()" id="break-button">Take my break</button>
-
+        <button class="btn" onclick="snd.play()" id="break-button">Take my break</button>
 
     </section>
     <section class="meme_viewer">
