@@ -52,15 +52,3 @@ dogBtn.addEventListener("click", function() {
 //when countdown timer reaches 0 goes to break page
 //this is in the countdown function in countdown.js 
 
-//when user clicks on take a break button, break timer starts and user goes to meme page
-var breakTime = localStorage.getItem("breakTime"); 
-console.log(breakTime); 
-
-takeMyBreakBtn.addEventListener("click", function() {
-    brainBreakPage.classList.add("hide"); 
-    memeViewerPage.classList.remove("hide"); 
-    setTimeout(function() {
-        memeViewerPage.classList.add("hide"); 
-        focusTimerPage.classList.remove("hide"); 
-    }, (breakTime * 60) * 1000)
-}); 

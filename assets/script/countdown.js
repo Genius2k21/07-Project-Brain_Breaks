@@ -10,6 +10,10 @@ var selectedTimeEl = document.querySelector("#selected_time");
 var slider = document.querySelector("#time_select");
 var breakTimeTextEl = document.querySelector("#calc_break_time");
 var brainBreakPage = document.getElementById("break-page");
+
+var memeViewerPage = document.getElementById("memeViewer"); 
+var takeMyBreakBtn = document.getElementById("break-button"); 
+var setTimerPage = document.getElementById("set_time"); 
 var focusTimerPage = document.getElementById("countdown");
 var titleEl = document.getElementsByClassName("title");
 
@@ -79,7 +83,6 @@ var startTimer = play.addEventListener("click", function () {
 
   paused = false;
 });
-startingSeconds = 10;
 function countdown() {
   initial = window.setInterval(function () {
     btn = localStorage.getItem("btn");
@@ -153,12 +156,22 @@ plusOneMinute.addEventListener("click", addMinute);
 
 //add confetti drop
 function runConfetti() {
-  confetti();
-  brainBreakPage.classList.remove("hide");
+
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 }
+  }); 
+  brainBreakPage.classList.remove("hide"); 
   focusTimerPage.classList.add("hide");
 }
-confetti({
-  particleCount: 100,
-  spread: 70,
-  origin: { y: 0.6 },
-});
+
+//when user clicks on take a break button, break timer starts and user goes to meme page
+takeMyBreakBtn.addEventListener("click", function() {
+  brainBreakPage.classList.add("hide"); 
+  memeViewerPage.classList.remove("hide"); 
+  setTimeout(function() {
+      memeViewerPage.classList.add("hide"); 
+      setTimerPage.classList.remove("hide");  
+  }, (breakTime * 60) * 1000)
+}); 
