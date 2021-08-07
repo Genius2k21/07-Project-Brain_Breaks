@@ -15,7 +15,7 @@ var player;
                         rel: 0,
                         showinfo: 0,
                         modestbranding: true, // modestbranding conflicts with showinfo
-                        autoplay: 0,
+                        autoplay: 1,
                         mute: 1
                     },
                     events: {
@@ -29,8 +29,16 @@ var player;
                 console.log('ready');
                 
                 // will autoplay
-                e.target.playVideo();
+                e.target.mute();
             }
+                function toggleSound() {
+                    if (player.isMuted()) {
+                      player.unMute()
+                    } else {
+                      player.mute()
+                  }
+                  }
+            
 
             function onPlayerStateChange(e) {
                 console.log('on state change');
@@ -44,18 +52,23 @@ var player;
             function controlUnmute() {
                 player.unMute();
             }
-            var control = document.querySelector('.control');
+
+
+
+            var control = document.querySelector('#mute-video');
             control.addEventListener('click', function(event){
-                event.preventDefault();
+                // event.preventDefault();
+                toggleSound();
             });
             
-            var toggleBtn = document.querySelector('#toggle');
-            toggleBtn.addEventListener('click', function(event){
-                if (event.checked = false){
-                    controlMute();
-                } else if (event.checked = true){
-                    player.unMute();
-                    console.log('hello')
-                } 
-            });
+            // var toggleBtn = document.querySelector('#toggle');
+            // toggleBtn.addEventListener('click', function(event){
+            //     if (event.checked = true){
+            //         controlUnmute();
+            //         console.log('hi');
+            //     } else if (event.checked = false){
+            //         player.mute();
+            //         console.log('hello');
+            //     } 
+            // });
             
