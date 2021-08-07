@@ -69,8 +69,8 @@ h1{
 /* --------------Set Timer Page----------------- */
 
 #time_sel_cont>p{
-    display:inline; 
-     
+    display:inline-block; 
+    width: 160px; 
 }
 
 #focus-time, #calc_break_time {
@@ -78,6 +78,13 @@ h1{
     text-shadow: 2px 2px 5px white;
 }
 
+#time_sel_cont_min {
+text-align:left; 
+}
+
+#time_sel_cont_max {
+text-align: right; 
+}
 output {
     display:block; 
     width: 100%;  
@@ -228,5 +235,11 @@ output{
 @media screen and (min-width: 768px) {
     .section {
         width: 700px; 
+    }
+    #time_sel_cont>p{ 
+        width: 240px; 
+    }
+    #time_select {
+        width: 400px; 
     }
 }
