@@ -20,11 +20,12 @@
     <title>Brain Breaks</title>
     <!-- Swiper JS Link  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    
+    <link rel="icon" type="image/png" href="./assets/Images/favicon.ico" />
+
 </head>
 
 <body>
-<!-- Welcome Page  -->
+    <!-- Welcome Page  -->
     <section class="section row" id="welcome">
         <h1>Brain Breaks</h1>
         <div>
@@ -39,7 +40,7 @@
         </div>
     </section>
 
-<!-- Set Time Screen  -->
+    <!-- Set Time Screen  -->
     <section class="section row" id="set_time">
         <header>
             <h4>How long would you like to focus?</h4>
@@ -49,7 +50,7 @@
             <p id="time_sel_cont_max">120 Min</p>
         </div>
         <input id="time_select" type="range" min="0" max="120" step="1" required
-            oninput="this.nextElementSibling.value = this.value"/>
+            oninput="this.nextElementSibling.value = this.value" />
         <output class="row" id="focus-time"></output>
 
         <h4>Total Break Time:</h4>
@@ -58,20 +59,21 @@
         <a class="waves-effect waves-light btn" id="set_time_btn" value="submit" type="submit">Set Time</a>
     </section>
 
-<!--Choose Meme Page-->
+    <!--Choose Meme Page-->
     <section id="choose_meme" class="chooseMeme section row">
         <h4>Choose a Category: </h4>
         <button id="catBtn" class="btn" value="cats"> Cats </button>
         <button id="dogBtn" class="btn" value="dogs"> Dogs </button>
     </section>
 
-<!-- Timer Page  -->
+    <!-- Timer Page  -->
     <section id="countdown" class="section row">
         <h3 unselectable="on" id="time_display">_ _ : _ _</h3>
         <i unselectable="on" class="material-icons" id="plus_one">plus_one</i>
         <i unselectable="on" id="playBtn" class="material-icons">play_circle_outline</i>
         <i unselectable="on" id="pauseBtn" class="material-icons">timer_off</i>
         <a class="material-icons" id="resumeBtn" value="submit">timer</a>
+
         <div id="youtube">
               
               <div id="player"></div>
@@ -84,8 +86,8 @@
 
         </div>
     </section>
- 
-<!-- Brain Break Page WHOOOO!!!  -->
+
+    <!-- Brain Break Page WHOOOO!!!  -->
     <section class="section row" id="break-page">
         <h2 id="good-job">Good Job! Now take a Break!</h2>
         <img src="./assets/Images/guess-what-its-break-time.jpeg" id="break-img">
