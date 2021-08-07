@@ -18,15 +18,18 @@
     display:none; 
 }
 
-.show {
-    display:block; 
-}
+/* .disappear {
+    transition: display 4s; 
+} */
 
 .section {
-    height: 812px; 
+    height: 700px; 
+    padding: 10px; 
     width: 375px; 
     text-align: center; 
     border: 1px solid white; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 12px white;
     display:flex; 
     flex-direction: column;
     justify-content: center;
@@ -35,9 +38,9 @@
 
 /* Brain Breaks */
 h1{
-    font-size: 2.5em; 
+    font-size: 2.3em; 
     font-family: 'Major Mono Display', monospace;
-    text-shadow: 3px 3px 8px var(--aqua);
+    text-shadow: 0px 0px 12px var(--aqua);
     color: var(--aqua); 
 }
 /* -------------Welcome Page--------------- */
@@ -52,7 +55,7 @@ h1{
 }
 
 .entername:focus {
-    text-shadow: 2px 2px 5px white;
+    text-shadow: 0px 0px 8px white;
 }
 
 .btn {
@@ -69,15 +72,22 @@ h1{
 /* --------------Set Timer Page----------------- */
 
 #time_sel_cont>p{
-    display:inline; 
-     
+    display:inline-block; 
+    width: 160px; 
 }
 
 #focus-time, #calc_break_time {
     color: white; 
-    text-shadow: 2px 2px 5px white;
+    text-shadow: 0px 0px 8px white;
 }
 
+#time_sel_cont_min {
+text-align:left; 
+}
+
+#time_sel_cont_max {
+text-align: right; 
+}
 output {
     display:block; 
     width: 100%;  
@@ -125,7 +135,7 @@ output{
 
 #playBtn:hover, #pauseBtn:hover, #resumeBtn:hover {
     cursor: pointer;
-    text-shadow: 2px 2px 5px var(--aqua);
+    text-shadow: 0px 0px 8px var(--aqua);
 }
 
 #plus_one{
@@ -143,10 +153,11 @@ output{
 }
 #plus_one:hover {
     cursor: pointer;
-    box-shadow: 2px 2px 5px white;
-    text-shadow: 2px 2px 5px white;
+    box-shadow: 0px 0px 8px white;
+    text-shadow: 0px 0px 8px white;
 }
 #time_display{
+    text-shadow: 0px 0px 8px var(--aqua); 
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
@@ -159,8 +170,10 @@ output{
     margin-top: 10px; 
     height: 200px; 
     border:1px solid white;  
+
     box-shadow: 3px 3px 8px black;
     visibility: hidden;
+    box-shadow: 0px 0px 12px black;
 }
 /* ---------------Break Page----------------- */
 
@@ -201,28 +214,24 @@ output{
     background-color: #242424;
     display: flex;
     align-items: center;
+    
 }
-
 .swiper-container {
     width: 345px;
     height: 812px;
     background-color: var(--light);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  #test_1{
+#test_1{
       background-color: pink;
-  }
+}
 
 #test_2{
     background-color: rgba(112, 197, 112, 0.753);   
-  }
-
-  #test_3{
-    background-color: rgba(112, 180, 197, 0.753);
-      
 }
 
 /*  */
@@ -296,3 +305,27 @@ input:focus + .slider {
   .slider.round:before {
     border-radius: 50%;
   }
+
+#test_3{
+    background-color: rgba(112, 180, 197, 0.753); 
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+    .section {
+        width: 700px;
+        padding: 30px;  
+    }
+    #time_sel_cont>p{ 
+        width: 240px; 
+    }
+    #time_select {
+        width: 480px; 
+    }
+    .swiper-container {
+        width: 700px;
+      }
+    
+}

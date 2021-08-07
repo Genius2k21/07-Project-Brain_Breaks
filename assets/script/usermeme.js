@@ -2,6 +2,7 @@ var dogUrl = "https://www.reddit.com/r/dogmemes/random.json";
 var catBtn = document.querySelector("#catBtn");
 var dogBtn = document.querySelector("#dogBtn");
 var swiperWrapper = document.querySelector(".swiper-wrapper");
+var swiperCont = document.querySelector(".swiper-container");
 
 memeBank = [];
 
@@ -26,7 +27,11 @@ function getDogMemes() {
           divEl.classList.add("swiper-slide");
           console.log(divEl);
           divEl.innerHTML =
-            '<img src="' + stringURL + '" width="' + screen.width + '">';
+            '<img src="' +
+            stringURL +
+            '" width="' +
+            swiperCont.offsetWidth +
+            '">';
           swiperWrapper.appendChild(divEl);
         }
         // console.log(memeBank);
@@ -60,6 +65,9 @@ function getCatMemes() {
         // console.log(memeBank);
       });
   }
+  console.log("hello");
+
+  screenJiggle();
 }
 
 catBtn.addEventListener("click", getCatMemes);
@@ -77,3 +85,15 @@ function getUserChoice(event) {
   setLocalStorage(event);
   console.log(userChoice);
 }
+
+console.log(screen.width);
+console.log(screen.height);
+console.log(screen.width + 1);
+console.log(screen.width - 200);
+
+function screenJiggle() {
+  window.resizeTo(screen.width - 1, screen.height);
+  window.resizeTo(screen.width + 1, screen.height);
+}
+
+console.log(screen.width);

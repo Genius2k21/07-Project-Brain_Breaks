@@ -31,9 +31,9 @@
             <h4>Enter your name:</h4>
             <form>
                 <div class="input-field">
-                    <input class="entername" placeholder="name" id="first_name2" type="text" class="validate">
+                    <input class="entername" placeholder="name" id="first_name2" type="text" class="validate" required>
                 </div>
-                <a class="waves-effect waves-light btn" id="submitname" value="submit">Save</a>
+                <a class="waves-effect waves-light btn" id="submitname" value="submit" type="submit">Save</a>
             </form>
             <p id="welcome-alert"></p>
         </div>
@@ -45,21 +45,21 @@
             <h4>How long would you like to focus?</h4>
         </header>
         <div id="time_sel_cont">
-            <p>0 Min</p>
-            <p>120 Min</p>
+            <p id="time_sel_cont_min">0 Min</p>
+            <p id="time_sel_cont_max">120 Min</p>
         </div>
-        <input id="time_select" type="range" min="0" max="120" step="10"
+        <input id="time_select" type="range" min="0" max="120" step="1" required
             oninput="this.nextElementSibling.value = this.value"/>
         <output class="row" id="focus-time"></output>
 
         <h4>Total Break Time:</h4>
         <p id="calc_break_time"></p>
 
-        <a class="waves-effect waves-light btn" id="set_time_btn" value="submit">Set Time</a>
+        <a class="waves-effect waves-light btn" id="set_time_btn" value="submit" type="submit">Set Time</a>
     </section>
 
 <!--Choose Meme Page-->
-    <section class="chooseMeme section row">
+    <section id="choose_meme" class="chooseMeme section row">
         <h4>Choose a Category: </h4>
         <button id="catBtn" class="btn" value="cats"> Cats </button>
         <button id="dogBtn" class="btn" value="dogs"> Dogs </button>
@@ -86,17 +86,16 @@
 
         </div>
     </section>
-  
+ 
+<!-- Brain Break Page WHOOOO!!!  -->
     <section class="section row" id="break-page">
-        <!-- Brain Break Page WHOOOO!!!  -->
         <h2 id="good-job">Good Job! Now take a Break!</h2>
-        <button class="btn" id="confetti">Confetti</button>
         <img src="./assets/Images/guess-what-its-break-time.jpeg" id="break-img">
 
         <button class="btn" onclick="snd.play()" id="break-button">Take my break</button>
 
     </section>
-    <section class="meme_viewer">
+    <section id="memeViewer" class="meme_viewer">
         <div class="swiper-container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
