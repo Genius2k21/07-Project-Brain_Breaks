@@ -34,7 +34,7 @@ getName.addEventListener("change", checkForm);
 
 function checkForm() {
     if (getName.value == "") {
-        alert("please enter your name")
+        console.log("no name"); 
     } else {
         submitBtn.classList.remove('disabled'); 
     }
