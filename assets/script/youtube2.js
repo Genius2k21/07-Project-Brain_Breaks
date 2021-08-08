@@ -7,8 +7,7 @@ var player;
                 console.log('iFrame Ready');
 
                 player = new YT.Player('player', { // player param is dom element id
-                    height: '400',
-                    width: '400',
+                    height: '150',
                     videoId: '5qap5aO4i9A',
                     playerVars: {
                         controls: 0,

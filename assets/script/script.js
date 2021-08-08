@@ -7,7 +7,7 @@ var chooseMemePage = document.getElementById("choose_meme");
 var focusTimerPage = document.getElementById("countdown"); 
 var brainBreakPage = document.getElementById("break-page"); 
 var memeViewerPage = document.getElementById("memeViewer"); 
-
+ 
 //buttons 
 var welcomeSaveButton = document.getElementById("submitname"); 
 var setTimeBtn = document.getElementById("set_time_btn"); 
@@ -21,7 +21,7 @@ chooseMemePage.classList.add("hide");
 focusTimerPage.classList.add("hide"); 
 brainBreakPage.classList.add("hide"); 
 memeViewerPage.classList.add("hide");  
-
+ 
 //when break timer reaches 0, goes back to timer page 
 
 //when user clicks save, transition waits 5 seconds before going to timer set page 
