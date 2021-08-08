@@ -18,42 +18,36 @@ muteMusic.addEventListener("click", function() {
     player.mute(); 
 })
 
-function onYouTubeIframeAPIReady() {
-    console.log('iFrame Ready');
+            function onYouTubeIframeAPIReady() {
+                console.log('iFrame Ready');
 
-    player = new YT.Player('player', { // player param is dom element id
-        height: '150',
-        videoId: '5qap5aO4i9A',
-        playerVars: {
-            controls: 0,
-            rel: 0,
-            showinfo: 0,
-            modestbranding: true, // modestbranding conflicts with showinfo
-            autoplay: 1,
-            mute: 1
-        },
-        events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-        }
-    });
-}
 
-function onPlayerReady(e) {
-    console.log('ready');
-    
-    // will autoplay
-    e.target.mute();
-}
+                player = new YT.Player('player', { // player param is dom element id
+                    height: '150',
+                    width: '100%', 
+                    videoId: '5qap5aO4i9A',
+                    playerVars: {
+                        autoplay: 1,
+                        playsinline: 1,
+                        mute: 1
+                    },
+                    events: {
+                        'onReady': onPlayerReady,
+                    }
+                });
+            }
 
-function toggleSound() {
-    if (player.isMuted()) {
-        player.unMute()
-    } else {
-        player.mute()
-    }
-}
-
-function onPlayerStateChange(e) {
-    console.log('on state change');
-}
+            function onPlayerReady(e) {
+                console.log('ready');
+                
+                // will autoplay
+                e.target.mute();
+                e.target.playVideo();
+            }
+                function toggleSound() {
+                    if (player.isMuted()) {
+                      player.unMute()
+                    } else {
+                      player.mute()
+                  }
+                  }
