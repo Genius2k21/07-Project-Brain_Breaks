@@ -156,6 +156,7 @@ output{
 }
 #time_display{
     text-shadow: 0px 0px 8px var(--aqua); 
+    font-size: 3em;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
