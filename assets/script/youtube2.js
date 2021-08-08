@@ -10,9 +10,9 @@ var player;
             function onYouTubeIframeAPIReady() {
                 console.log('iFrame Ready');
 
-                player = new YT.Player('player', {
-                    height: '50%',
-                    width: '100%',
+
+                player = new YT.Player('player', { // player param is dom element id
+                    height: '150', 
                     videoId: '5qap5aO4i9A',
                     playerVars: {
                         autoplay: 1,
