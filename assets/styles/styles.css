@@ -226,6 +226,10 @@ output{
     justify-content: center;
 }
 
+.swiper-wrapper{
+
+}
+
 #test_1{
       background-color: pink;
 }
