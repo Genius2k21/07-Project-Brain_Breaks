@@ -25,6 +25,10 @@ var formattedBreakTime;
 var paused;
 var initial;
 
+slider.addEventListener("change", function() {
+  setTimeBtn.classList.remove("disabled"); 
+})
+
 //saves timer state into local storage
 localStorage.setItem("btn", "focus");
 

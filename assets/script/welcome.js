@@ -18,7 +18,7 @@ submitBtn.addEventListener('click', function(){
     //saves user's name into local storage under name 
     localStorage.setItem('name', userName);
     //runs displayName function 
-    displayName();
+    displayName(); 
 });
 
 //when user submits their name, it displays user's name underneath submit button 
@@ -30,4 +30,12 @@ function displayName(){
     }
 }
 
-// document.body.onload = displayName;
+getName.addEventListener("change", checkForm); 
+
+function checkForm() {
+    if (getName.value == "") {
+        console.log("no name"); 
+    } else {
+        submitBtn.classList.remove('disabled'); 
+    }
+}
