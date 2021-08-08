@@ -1,25 +1,26 @@
 
+var tag = document.createElement('script');
 
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 var player;
 
             function onYouTubeIframeAPIReady() {
                 console.log('iFrame Ready');
 
+
                 player = new YT.Player('player', { // player param is dom element id
-                    height: '150',
+                    height: '150', 
                     videoId: '5qap5aO4i9A',
                     playerVars: {
-                        controls: 0,
-                        rel: 0,
-                        showinfo: 0,
-                        modestbranding: true, // modestbranding conflicts with showinfo
                         autoplay: 1,
+                        playsinline: 1,
                         mute: 1
                     },
                     events: {
                         'onReady': onPlayerReady,
-                        'onStateChange': onPlayerStateChange
                     }
                 });
             }
@@ -29,6 +30,7 @@ var player;
                 
                 // will autoplay
                 e.target.mute();
+                e.target.playVideo();
             }
                 function toggleSound() {
                     if (player.isMuted()) {
@@ -38,11 +40,6 @@ var player;
                   }
                   }
             
-
-            function onPlayerStateChange(e) {
-                console.log('on state change');
-            }
-
 
             function controlMute() {
                 player.mute();
