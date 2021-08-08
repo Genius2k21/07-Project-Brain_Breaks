@@ -12,7 +12,8 @@ var player;
 
 
                 player = new YT.Player('player', { // player param is dom element id
-                    height: '150', 
+                    height: '150',
+                    width: '100%', 
                     videoId: '5qap5aO4i9A',
                     playerVars: {
                         autoplay: 1,
