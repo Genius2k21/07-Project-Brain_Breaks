@@ -23,8 +23,12 @@
     <link rel="icon" type="image/png" href="./assets/Images/favicon.ico" />
 
 </head>
-
 <body>
+    <div id="music-controls">
+        <p>Music</p>
+        <i class="material-icons hide"id="play-video">play_arrow</i>
+    <i class="material-icons" id="mute-video">pause</i>
+    </div>
     <!-- Welcome Page  -->
     <section class="section row" id="welcome">
         <h1>Brain Breaks</h1>
@@ -77,12 +81,11 @@
         <div id="youtube">
 
             <div id="player"></div>
-            <h3>Play some Lofi Hip-hop beats while you work</h3>
-            <label class="switch">
-                <p>Toggle Play or Pause</p>
-                <input type="checkbox" id="mute-video">
-                <span class="slider round"></span>
-            </label>
+
+
+            <!-- <input type="checkbox" id="mute-video">
+            <span class="slider round" ></span> -->
+
 
         </div>
     </section>
@@ -114,7 +117,7 @@
         </div>
     </section>
     </div>
-    <script src="https://www.youtube.com/iframe_api"></script>
+    
     <script src="./assets/script/youtube2.js"></script>
     <script src="./assets/script/script.js"></script>
     <script src="./assets/script/welcome.js"></script>
