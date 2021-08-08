@@ -35,6 +35,7 @@ function getDogMemes() {
               swiperCont.offsetWidth +
               '">';
             swiperWrapper.appendChild(divEl);
+            swiperSlide.style.backgroundImage = "url(" + stringURL + ")";
           } else if (stringURL.charAt(8) == "v") {
             console.log(data);
             var divEl = document.createElement("div");
