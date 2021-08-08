@@ -1,11 +1,22 @@
-
-var tag = document.createElement('script');
-
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var playMusic = document.getElementById("play-music"); 
+var muteMusic = document.getElementById("mute-music");  
+var control = document.querySelector('#mute-video'); 
 
 var player;
+
+muteMusic.classList.add("hide"); 
+
+playMusic.addEventListener("click", function() {
+    playMusic.classList.add("hide"); 
+    muteMusic.classList.remove("hide"); 
+    player.unMute(); 
+})
+
+muteMusic.addEventListener("click", function() {
+    muteMusic.classList.add("hide"); 
+    playMusic.classList.remove("hide"); 
+    player.mute(); 
+})
 
             function onYouTubeIframeAPIReady() {
                 console.log('iFrame Ready');
@@ -40,32 +51,3 @@ var player;
                       player.mute()
                   }
                   }
-            
-
-            function controlMute() {
-                player.mute();
-            }
-
-            function controlUnmute() {
-                player.unMute();
-            }
-
-
-
-            var control = document.querySelector('#mute-video');
-            control.addEventListener('click', function(event){
-                // event.preventDefault();
-                toggleSound();
-            });
-            
-            // var toggleBtn = document.querySelector('#toggle');
-            // toggleBtn.addEventListener('click', function(event){
-            //     if (event.checked = true){
-            //         controlUnmute();
-            //         console.log('hi');
-            //     } else if (event.checked = false){
-            //         player.mute();
-            //         console.log('hello');
-            //     } 
-            // });
-            

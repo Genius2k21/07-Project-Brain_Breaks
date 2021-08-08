@@ -165,7 +165,7 @@ output{
 #player {
     visibility: hidden;
 }
-#music-controls {
+.music-controls {
     border: 1px solid white;
     box-shadow:0px 0px 8px white;  
     border-radius: 10px;
