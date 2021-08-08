@@ -56,11 +56,27 @@ function getCatMemes() {
         } else {
           var stringURL = data[0].data.children[0].data.url_overridden_by_dest;
           // console.log(src);
-          var divEl = document.createElement("div");
-          divEl.classList.add("swiper-slide");
-          console.log(divEl);
-          divEl.innerHTML = '<img src="' + stringURL + '" width="' + 342 + '">';
-          swiperWrapper.appendChild(divEl);
+          if (stringURL.charAt(8) == "i") {
+            var divEl = document.createElement("div");
+            divEl.classList.add("swiper-slide");
+            console.log(divEl);
+            divEl.innerHTML =
+              '<img src="' + stringURL + '" width="' + 342 + '">';
+            swiperWrapper.appendChild(divEl);
+          } else if (stringURL.charAt(8) == "v") {
+            console.log(data);
+            var divEl = document.createElement("div");
+            divEl.classList.add("swiper-slide");
+            console.log(divEl);
+            divEl.innerHTML =
+              '<video autoplay="true" width="' +
+              swiperCont.offsetWidth +
+              '"> <source src="' +
+              data[0].data.children[0].data.secure_media.reddit_video
+                .fallback_url +
+              '"></video>';
+            swiperWrapper.appendChild(divEl);
+          }
         }
         // console.log(memeBank);
       });
