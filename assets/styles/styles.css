@@ -10,7 +10,6 @@
     box-sizing: border-box;
     font-size: 16px; 
     color: var(--aqua); 
-    background-color: var(--dark); 
     font-family:monospace; 
 }
 
@@ -18,8 +17,13 @@
     display:none; 
 }
 
+body{
+    background-color: var(--dark);
+}
+
 .section {
     height: 100vh; 
+    background-color: var(--dark); 
     padding: 10px; 
     margin-top: 20px; 
     width: 375px; 
@@ -33,6 +37,7 @@
     align-items: center;
     position:relative; 
 }
+
 
 /* Brain Breaks */
 h1{
@@ -50,6 +55,11 @@ h1{
     font-family: monospace; 
     color: white;
     text-align: center;
+}
+
+.wrapper{
+    background-color: var(--dark);
+    z-index: -1;
 }
 
 .entername:focus {
@@ -181,6 +191,10 @@ output{
     z-index:1;  */
 }
 
+#vbg{
+    display: none;
+}
+
 #play-video, #mute-video {
     font-size: 20px;
 }
@@ -277,7 +291,7 @@ img{
        justify-content: center;
        height: 100vh;
        margin: 10px;
-
+       background-color: rgba(0, 0, 0, 0);
     }
 
     #time_sel_cont>p{ 
@@ -294,8 +308,23 @@ img{
         margin: 80px 700px;
     }
 
-    video{
+    #vbg{
+        display: block;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
+
+    /* video{
         margin: 0 800px
+    } */
+
+    #countdown{
+        width: 700px;
+        background-color: rgba(0, 0, 0, 0.747);
     }
 
     .swiper-slide{

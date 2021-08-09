@@ -40,15 +40,15 @@
                 <form>
                     <div class="input-field">
                         <input class="entername" placeholder="name" id="first_name2" type="text" class="validate"
-                            required>
+                        required>
                     </div>
                     <a class="waves-effect waves-light btn disabled" id="submitname" value="submit"
-                        type="submit">Save</a>
+                    type="submit">Save</a>
                 </form>
                 <p id="welcome-alert"></p>
             </div>
         </section>
-
+        
         <!-- Set Time Screen  -->
         <section class="section row" id="set_time">
             <header>
@@ -59,15 +59,15 @@
                 <p id="time_sel_cont_max">120 Min</p>
             </div>
             <input id="time_select" type="range" min="0" max="120" step="1" required
-                oninput="this.nextElementSibling.value = this.value" />
+            oninput="this.nextElementSibling.value = this.value" />
             <output class="row" id="focus-time"></output>
-
+            
             <h4>Total Break Time:</h4>
             <p id="calc_break_time"></p>
-
+            
             <a class="waves-effect waves-light btn disabled" id="set_time_btn" value="submit" type="submit">Set Time</a>
         </section>
-
+        
         <!--Choose Meme Page-->
         <section id="choose_meme" class="chooseMeme section row">
             <h4>Choose a Category: </h4>
@@ -77,9 +77,10 @@
             <button id="dankBtn" class="btn" value="dank">Dank</button>
             <button id="wholesomeBtn" class="btn" value="wholesome">Wholesome</button>
         </section>
-
+        
         <!-- Timer Page  -->
         <section id="countdown" class="section row">
+            <video autoplay loop id="vbg" src="./assets/video/geometric-shapes.mp4"></video>
             <h3 unselectable="on" id="time_display">_ _ : _ _</h3>
             <i unselectable="on" class="material-icons" id="plus_one">plus_one</i>
             <i unselectable="on" id="playBtn" class="material-icons">play_circle_outline</i>
