@@ -21,7 +21,7 @@ chooseMemePage.classList.add("hide");
 focusTimerPage.classList.add("hide");
 brainBreakPage.classList.add("hide");
 
-//BUG!!! When this is commented out, the memes show up.
+//BUG!!!! When this is commented out, the memes show up.
 // memeViewerPage.classList.add("hide");
 
 //when break timer reaches 0, goes back to timer page
