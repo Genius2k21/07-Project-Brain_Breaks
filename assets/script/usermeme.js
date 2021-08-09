@@ -301,7 +301,6 @@ dogBtn.addEventListener("click", getDogMemes);
 sportBtn.addEventListener("click", getSportMemes);
 dankBtn.addEventListener("click", getDankMemes);
 wholesomeBtn.addEventListener("click", getWholesomeMemes);
-historyBtn.addEventListener("click", getHistoryMemes);
 
 //this saves the user's choice into local storage
 // function setLocalStorage(event) {
