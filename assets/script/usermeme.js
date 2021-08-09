@@ -24,7 +24,11 @@ function getDogMemes() {
         } else {
           var stringURL = data[0].data.children[0].data.url_overridden_by_dest;
           // console.log(src);
-          if (stringURL.charAt(8) == "i") {
+          if (
+            stringURL.charAt(8) == "i" &&
+            stringURL.charAt(10) !== "i" &&
+            stringURL.charAt(9) !== "m"
+          ) {
             var divEl = document.createElement("div");
             divEl.classList.add("swiper-slide");
             console.log(divEl);
@@ -35,8 +39,10 @@ function getDogMemes() {
               swiperCont.offsetWidth +
               '">';
             swiperWrapper.appendChild(divEl);
-            swiperSlide.style.backgroundImage = "url(" + stringURL + ")";
-          } else if (stringURL.charAt(8) == "v") {
+          } else if (
+            stringURL.charAt(8) == "v" &&
+            stringURL.charAt(10) !== "i"
+          ) {
             console.log(data);
             var divEl = document.createElement("div");
             divEl.classList.add("swiper-slide");
@@ -49,18 +55,12 @@ function getDogMemes() {
                 .fallback_url +
               '"></video>';
             swiperWrapper.appendChild(divEl);
-          } else if (stringURL.includes("imgur")) {
-            return;
+          } else {
+            console.log("IMGUR");
           }
         }
-        // $(".swiper-slide").each(function () {
-        //   $('.swiper-slide:contains("' + $(this).text() + '"):gt(0)').remove();
-        // });
       });
   }
-  console.log("hello");
-
-  screenJiggle();
 }
 
 function getCatMemes() {
@@ -80,7 +80,11 @@ function getCatMemes() {
         } else {
           var stringURL = data[0].data.children[0].data.url_overridden_by_dest;
           // console.log(src);
-          if (stringURL.charAt(8) == "i") {
+          if (
+            stringURL.charAt(8) == "i" &&
+            stringURL.charAt(10) !== "i" &&
+            stringURL.charAt(9) !== "m"
+          ) {
             var divEl = document.createElement("div");
             divEl.classList.add("swiper-slide");
             console.log(divEl);
@@ -91,7 +95,10 @@ function getCatMemes() {
               swiperCont.offsetWidth +
               '">';
             swiperWrapper.appendChild(divEl);
-          } else if (stringURL.charAt(8) == "v") {
+          } else if (
+            stringURL.charAt(8) == "v" &&
+            stringURL.charAt(10) !== "i"
+          ) {
             console.log(data);
             var divEl = document.createElement("div");
             divEl.classList.add("swiper-slide");
@@ -104,20 +111,73 @@ function getCatMemes() {
                 .fallback_url +
               '"></video>';
             swiperWrapper.appendChild(divEl);
-          } else if (stringURL.includes("imgur")) {
-            return;
+          } else {
+            console.log("IMGUR");
           }
         }
-        // $(".swiper-slide").each(function () {
-        //   $('.swiper-slide:contains("' + $(this).text() + '"):gt(0)').remove();
-        // });
       });
   }
-  console.log("hello");
-
-  screenJiggle();
 }
 
+function getSportMemes() {
+  for (i = 0; i < 100; i++) {
+    fetch("https://www.reddit.com/r/SportsMemes/random.json")
+      .then(function (response) {
+        if (response.ok) {
+          return response.json();
+        } else if (response.status === 403) throw Error("Error");
+        return;
+      })
+      .then(function (data) {
+        if (
+          data[0].data.children[0].data.url_overridden_by_dest.includes("www")
+        ) {
+          console.log("bad link");
+        } else {
+          var stringURL = data[0].data.children[0].data.url_overridden_by_dest;
+          // console.log(src);
+          if (
+            stringURL.charAt(8) == "i" &&
+            stringURL.charAt(10) !== "i" &&
+            stringURL.charAt(9) !== "m"
+          ) {
+            var divEl = document.createElement("div");
+            divEl.classList.add("swiper-slide");
+            console.log(divEl);
+            divEl.innerHTML =
+              '<img src="' +
+              stringURL +
+              '" width="' +
+              swiperCont.offsetWidth +
+              '">';
+            swiperWrapper.appendChild(divEl);
+          } else if (
+            stringURL.charAt(8) == "v" &&
+            stringURL.charAt(10) !== "i"
+          ) {
+            console.log(data);
+            var divEl = document.createElement("div");
+            divEl.classList.add("swiper-slide");
+            console.log(divEl);
+            divEl.innerHTML =
+              '<video loop autoplay width="' +
+              swiperCont.offsetWidth +
+              '"> <source src="' +
+              data[0].data.children[0].data.secure_media.reddit_video
+                .fallback_url +
+              '"></video>';
+            swiperWrapper.appendChild(divEl);
+          } else {
+            console.log("IMGUR");
+          }
+        }
+      });
+  }
+}
+
+// $(".swiper-slide").each(function () {
+//   $('.swiper-slide:contains("' + $(this).text() + '"):gt(0)').remove();
+// });
 catBtn.addEventListener("click", getCatMemes);
 
 dogBtn.addEventListener("click", getDogMemes);
