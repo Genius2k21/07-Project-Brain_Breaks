@@ -311,18 +311,4 @@ function getUserChoice(event) {
 }
 
 console.log(screen.width);
-console.log(screen.height);
-console.log(screen.width + 1);
-console.log(screen.width - 200);
 
-function screenJiggle() {
-  window.resizeTo(screen.width - 1, screen.height);
-  window.resizeTo(screen.width + 1, screen.height);
-}
-
-console.log(screen.width);
-
-function playSound(url) {
-  var a = new Audio(url);
-  a.play();
-}

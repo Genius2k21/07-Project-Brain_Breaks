@@ -11,9 +11,9 @@ var slider = document.querySelector("#time_select");
 var breakTimeTextEl = document.querySelector("#calc_break_time");
 var brainBreakPage = document.getElementById("break-page");
 
-var memeViewerPage = document.getElementById("memeViewer"); 
-var takeMyBreakBtn = document.getElementById("break-button"); 
-var setTimerPage = document.getElementById("set_time"); 
+var memeViewerPage = document.getElementById("memeViewer");
+var takeMyBreakBtn = document.getElementById("break-button");
+var setTimerPage = document.getElementById("set_time");
 var focusTimerPage = document.getElementById("countdown");
 var titleEl = document.getElementsByClassName("title");
 
@@ -25,9 +25,9 @@ var formattedBreakTime;
 var paused;
 var initial;
 
-slider.addEventListener("change", function() {
-  setTimeBtn.classList.remove("disabled"); 
-})
+slider.addEventListener("change", function () {
+  setTimeBtn.classList.remove("disabled");
+});
 
 //saves timer state into local storage
 localStorage.setItem("btn", "focus");
@@ -160,22 +160,22 @@ plusOneMinute.addEventListener("click", addMinute);
 
 //add confetti drop
 function runConfetti() {
-
   confetti({
     particleCount: 100,
     spread: 70,
-    origin: { y: 0.6 }
-  }); 
-  brainBreakPage.classList.remove("hide"); 
+    origin: { y: 0.6 },
+  });
+  brainBreakPage.classList.remove("hide");
   focusTimerPage.classList.add("hide");
 }
 
 //when user clicks on take a break button, break timer starts and user goes to meme page
-takeMyBreakBtn.addEventListener("click", function() {
-  brainBreakPage.classList.add("hide"); 
-  memeViewerPage.classList.remove("hide"); 
-  setTimeout(function() {
-      memeViewerPage.classList.add("hide"); 
-      setTimerPage.classList.remove("hide");  
-  }, (breakTime * 60) * 1000)
-}); 
+takeMyBreakBtn.addEventListener("click", function () {
+  brainBreakPage.classList.add("hide");
+  memeViewerPage.classList.remove("hide");
+  setTimeout(function () {
+    memeViewerPage.classList.add("hide");
+    setTimerPage.classList.remove("hide");
+    document.querySelector(".swiper-wrapper").innerHTML = "";
+  }, breakTime * 60 * 1000);
+});
