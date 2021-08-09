@@ -16,8 +16,8 @@ muteMusic.classList.add("hide");
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("player", {
     // player param is dom element id
-    height: "150",
-    width: "300",
+    height: "0",
+    width: "0",
     videoId: "5qap5aO4i9A",
     playerVars: {
       autoplay: 1,
