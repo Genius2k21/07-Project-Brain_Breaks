@@ -19,14 +19,15 @@
 
 body{
     background-color: var(--dark);
+    height: 100vh; 
 }
 
 .section {
-    height: 100vh; 
     background-color: var(--dark); 
     padding: 10px; 
     margin-top: 20px; 
     width: 375px; 
+    height: 90vh; 
     text-align: center; 
     border: 1px solid white; 
     border-radius: 10px; 
