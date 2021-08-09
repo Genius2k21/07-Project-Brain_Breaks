@@ -292,10 +292,6 @@ function getWholesomeMemes() {
   }
 }
 
-// $(".swiper-slide").each(function () {
-//   $('.swiper-slide:contains("' + $(this).text() + '"):gt(0)').remove();
-// });
-
 catBtn.addEventListener("click", getCatMemes);
 dogBtn.addEventListener("click", getDogMemes);
 sportBtn.addEventListener("click", getSportMemes);
