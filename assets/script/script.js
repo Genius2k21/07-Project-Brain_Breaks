@@ -1,19 +1,24 @@
-// This handles the main section of the screens / hiding screens and displaying screens
+// This handles the main section of the screens / hiding screens and displaying screens 
 
-//screens
-var welcomePage = document.getElementById("welcome");
-var setTimerPage = document.getElementById("set_time");
-var chooseMemePage = document.getElementById("choose_meme");
-var focusTimerPage = document.getElementById("countdown");
-var brainBreakPage = document.getElementById("break-page");
-var memeViewerPage = document.getElementById("memeViewer");
+//screens 
+var welcomePage = document.getElementById("welcome"); 
+var setTimerPage = document.getElementById("set_time"); 
+var chooseMemePage = document.getElementById("choose_meme"); 
+var focusTimerPage = document.getElementById("countdown"); 
+var brainBreakPage = document.getElementById("break-page"); 
+var memeViewerPage = document.getElementById("memeViewer"); 
+var pause = document.getElementById("pauseBtn");
 
-//buttons
-var welcomeSaveButton = document.getElementById("submitname");
-var setTimeBtn = document.getElementById("set_time_btn");
-var catBtn = document.getElementById("catBtn");
-var dogBtn = document.getElementById("dogBtn");
-var takeMyBreakBtn = document.getElementById("break-button");
+ 
+//buttons 
+var welcomeSaveButton = document.getElementById("submitname"); 
+var setTimeBtn = document.getElementById("set_time_btn"); 
+var catBtn = document.getElementById("catBtn"); 
+var dogBtn = document.getElementById("dogBtn"); 
+var takeMyBreakBtn = document.getElementById("break-button"); 
+var play = document.querySelector("#playBtn");
+
+
 
 //on start up all screens are hidden except welcome page
 setTimerPage.classList.add("hide");
@@ -42,14 +47,18 @@ setTimeBtn.addEventListener("click", function (e) {
 });
 
 //when user clicks on a category, user goes to focus timer page
-catBtn.addEventListener("click", function () {
-  chooseMemePage.classList.add("hide");
-  focusTimerPage.classList.remove("hide");
-});
-dogBtn.addEventListener("click", function () {
-  chooseMemePage.classList.add("hide");
-  focusTimerPage.classList.remove("hide");
-});
+
+catBtn.addEventListener("click", function() {
+    chooseMemePage.classList.add("hide"); 
+    focusTimerPage.classList.remove("hide"); 
+    play.classList.remove("hide"); 
+    pause.classList.add("hide"); 
+
+})
+dogBtn.addEventListener("click", function() {
+    chooseMemePage.classList.add("hide"); 
+    focusTimerPage.classList.remove("hide"); 
+})
 
 //when countdown timer reaches 0 goes to break page
 //this is in the countdown function in countdown.js
