@@ -7,6 +7,8 @@ var chooseMemePage = document.getElementById("choose_meme");
 var focusTimerPage = document.getElementById("countdown"); 
 var brainBreakPage = document.getElementById("break-page"); 
 var memeViewerPage = document.getElementById("memeViewer"); 
+var pause = document.getElementById("pauseBtn");
+
  
 //buttons 
 var welcomeSaveButton = document.getElementById("submitname"); 
@@ -14,6 +16,8 @@ var setTimeBtn = document.getElementById("set_time_btn");
 var catBtn = document.getElementById("catBtn"); 
 var dogBtn = document.getElementById("dogBtn"); 
 var takeMyBreakBtn = document.getElementById("break-button"); 
+var play = document.querySelector("#playBtn");
+
 
 //on start up all screens are hidden except welcome page
 setTimerPage.classList.add("hide"); 
@@ -43,6 +47,9 @@ setTimeBtn.addEventListener("click", function(e) {
 catBtn.addEventListener("click", function() {
     chooseMemePage.classList.add("hide"); 
     focusTimerPage.classList.remove("hide"); 
+    play.classList.remove("hide"); 
+    pause.classList.add("hide"); 
+
 })
 dogBtn.addEventListener("click", function() {
     chooseMemePage.classList.add("hide"); 

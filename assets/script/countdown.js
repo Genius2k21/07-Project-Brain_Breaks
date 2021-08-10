@@ -32,6 +32,8 @@ localStorage.setItem("btn", "focus");
 pause.classList.add("hide");
 resume.classList.add("hide");
 
+play.classList.remove("hide"); 
+
 function setLocalStorage() {
   localStorage.setItem("focusTime", focusTime);
   localStorage.setItem("breakTime", breakTime);
@@ -83,6 +85,7 @@ var startTimer = play.addEventListener("click", function () {
 
   paused = false;
 });
+
 function countdown() {
   initial = window.setInterval(function () {
     btn = localStorage.getItem("btn");
@@ -170,8 +173,12 @@ function runConfetti() {
 takeMyBreakBtn.addEventListener("click", function() {
   brainBreakPage.classList.add("hide"); 
   memeViewerPage.classList.remove("hide"); 
+
   setTimeout(function() {
       memeViewerPage.classList.add("hide"); 
       setTimerPage.classList.remove("hide");  
+      pause.classList.add("hide");
+      resume.classList.add("hide");
+      play.classList.remove("hide"); 
   }, (breakTime * 60) * 1000)
 }); 
