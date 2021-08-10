@@ -22,7 +22,7 @@ focusTimerPage.classList.add("hide");
 brainBreakPage.classList.add("hide");
 
 //RESOLVED(BUG!!!! When this is commented out, the memes show up.)
-memeViewerPage.classList.add("hide");
+// memeViewerPage.classList.add("hide");
 
 //when break timer reaches 0, goes back to timer page
 
@@ -53,4 +53,3 @@ dogBtn.addEventListener("click", function () {
 
 //when countdown timer reaches 0 goes to break page
 //this is in the countdown function in countdown.js
-
