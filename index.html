@@ -15,8 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>Brain Breaks</title>
     <!-- Swiper JS Link  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -39,16 +38,14 @@
                 <h4>Enter your name:</h4>
                 <form>
                     <div class="input-field">
-                        <input class="entername" placeholder="name" id="first_name2" type="text" class="validate"
-                        required>
+                        <input class="entername" placeholder="name" id="first_name2" type="text" class="validate" required>
                     </div>
-                    <a class="waves-effect waves-light btn disabled" id="submitname" value="submit"
-                    type="submit">Save</a>
+                    <a class="waves-effect waves-light btn disabled" id="submitname" value="submit" type="submit">Save</a>
                 </form>
                 <p id="welcome-alert"></p>
             </div>
         </section>
-        
+
         <!-- Set Time Screen  -->
         <section class="section row" id="set_time">
             <header>
@@ -58,16 +55,15 @@
                 <p id="time_sel_cont_min">0 Min</p>
                 <p id="time_sel_cont_max">120 Min</p>
             </div>
-            <input id="time_select" type="range" min="0" max="120" step="1" required
-            oninput="this.nextElementSibling.value = this.value" />
+            <input id="time_select" type="range" min="0" max="120" step="1" required oninput="this.nextElementSibling.value = this.value" />
             <output class="row" id="focus-time"></output>
-            
+
             <h4>Total Break Time:</h4>
             <p id="calc_break_time"></p>
-            
+
             <a class="waves-effect waves-light btn disabled" id="set_time_btn" value="submit" type="submit">Set Time</a>
         </section>
-        
+
         <!--Choose Meme Page-->
         <section id="choose_meme" class="chooseMeme section row">
             <h4>Choose a Category: </h4>
@@ -77,7 +73,7 @@
             <button id="dankBtn" class="btn" value="dank">Dank</button>
             <button id="wholesomeBtn" class="btn" value="wholesome">Wholesome</button>
         </section>
-        
+
         <!-- Timer Page  -->
         <section id="countdown" class="section row">
             <video autoplay loop id="vbg" src="./assets/video/geometric-shapes.mp4"></video>
@@ -96,7 +92,7 @@
         <!-- Brain Break Page WHOOOO!!!  -->
         <section class="section row" id="break-page">
             <h2 id="good-job">Good Job! Now take a Break!</h2>
-            <img src="./assets/Images/guess-what-its-break-time.jpeg" id="break-img">
+            <img src="./assets/Images/break-img.jpeg" id="break-img">
 
             <button class="btn" onclick="snd.play()" id="break-button">Take my break</button>
 
@@ -126,8 +122,7 @@
     <script src="./assets/script/script.js"></script>
     <script src="./assets/script/welcome.js"></script>
     <script src="./assets/script/countdown.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./assets/script/usermeme.js"></script>
     <script src="./assets/script/sound.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>

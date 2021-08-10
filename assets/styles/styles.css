@@ -252,8 +252,8 @@ output {
 }
 
 #break-img {
-    width: 300px;
-    height: 180px;
+    width: 270px;
+    height: 260px;
     margin: 70px 700px;
 }
 
@@ -312,8 +312,8 @@ img {
 
 @media screen and (min-width: 768px) {
     #break-img {
-        width: 300px;
-        height: 500px;
+        width: 250px;
+        height: 300px;
     }
     h1 {
         font-size: 3em;
