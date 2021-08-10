@@ -3,6 +3,10 @@ mySwiper = new Swiper('.swiper-container', {
   loop: false,
   observer: true,
   observeParents: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
 
   // If we need pagination
   pagination: {

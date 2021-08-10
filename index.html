@@ -23,103 +23,117 @@
     <link rel="icon" type="image/png" href="./assets/Images/favicon.ico" />
 
 </head>
+
 <body>
-    <div class="music-controls" id="mute-video">
-        <p>Music</p>
-        <i class="material-icons" id="play-music">play_arrow</i>
-        <i class="material-icons" id="mute-music">pause</i>
-    </div>
-    <!-- Welcome Page  -->
-    <section class="section row" id="welcome">
-        <h1>Brain Breaks</h1>
-        <div>
-            <h4>Enter your name:</h4>
-            <form>
-                <div class="input-field">
-                    <input class="entername" placeholder="name" id="first_name2" type="text" class="validate" required>
-                </div>
-                <a class="waves-effect waves-light btn" id="submitname" value="submit" type="submit">Save</a>
-            </form>
-            <p id="welcome-alert"></p>
+    <div class="wrapper">
+
+        <div class="music-controls" id="mute-video">
+            <p>Music</p>
+            <i class="material-icons" id="play-music">play_arrow</i>
+            <i class="material-icons" id="mute-music">pause</i>
         </div>
-    </section>
-
-    <!-- Set Time Screen  -->
-    <section class="section row" id="set_time">
-        <header>
-            <h4>How long would you like to focus?</h4>
-        </header>
-        <div id="time_sel_cont">
-            <p id="time_sel_cont_min">0 Min</p>
-            <p id="time_sel_cont_max">120 Min</p>
-        </div>
-        <input id="time_select" type="range" min="0" max="120" step="1" required
-            oninput="this.nextElementSibling.value = this.value" />
-        <output class="row" id="focus-time"></output>
-
-        <h4>Total Break Time:</h4>
-        <p id="calc_break_time"></p>
-
-        <a class="waves-effect waves-light btn" id="set_time_btn" value="submit" type="submit">Set Time</a>
-    </section>
-
-    <!--Choose Meme Page-->
-    <section id="choose_meme" class="chooseMeme section row">
-        <h4>Choose a Category: </h4>
-        <button id="catBtn" class="btn" value="cats"> Cats </button>
-        <button id="dogBtn" class="btn" value="dogs"> Dogs </button>
-    </section>
-
-    <!-- Timer Page  -->
-    <section id="countdown" class="section row">
-        <h3 unselectable="on" id="time_display">_ _ : _ _</h3>
-        <i unselectable="on" class="material-icons" id="plus_one">plus_one</i>
-        <i unselectable="on" id="playBtn" class="material-icons">play_circle_outline</i>
-        <i unselectable="on" id="pauseBtn" class="material-icons">timer_off</i>
-        <a class="material-icons" id="resumeBtn" value="submit">timer</a>
-
-        <div id="youtube">
-
-            <div id="player"></div>
-        </div>
-    </section>
-
-    <!-- Brain Break Page WHOOOO!!!  -->
-    <section class="section row" id="break-page">
-        <h2 id="good-job">Good Job! Now take a Break!</h2>
-        <img src="./assets/Images/guess-what-its-break-time.jpeg" id="break-img">
-
-        <button class="btn" onclick="snd.play()" id="break-button">Take my break</button>
-
-    </section>
-    <section id="memeViewer" class="meme_viewer">
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-
+        <!-- Welcome Page  -->
+        <section class="section row" id="welcome">
+            <h1>Brain Breaks</h1>
+            <div>
+                <h4>Enter your name:</h4>
+                <form>
+                    <div class="input-field">
+                        <input class="entername" placeholder="name" id="first_name2" type="text" class="validate"
+                        required>
+                    </div>
+                    <a class="waves-effect waves-light btn disabled" id="submitname" value="submit"
+                    type="submit">Save</a>
+                </form>
+                <p id="welcome-alert"></p>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination hide"></div>
+        </section>
+        
+        <!-- Set Time Screen  -->
+        <section class="section row" id="set_time">
+            <header>
+                <h4>How long would you like to focus?</h4>
+            </header>
+            <div id="time_sel_cont">
+                <p id="time_sel_cont_min">0 Min</p>
+                <p id="time_sel_cont_max">120 Min</p>
+            </div>
+            <input id="time_select" type="range" min="0" max="120" step="1" required
+            oninput="this.nextElementSibling.value = this.value" />
+            <output class="row" id="focus-time"></output>
+            
+            <h4>Total Break Time:</h4>
+            <p id="calc_break_time"></p>
+            
+            <a class="waves-effect waves-light btn disabled" id="set_time_btn" value="submit" type="submit">Set Time</a>
+        </section>
+        
+        <!--Choose Meme Page-->
+        <section id="choose_meme" class="chooseMeme section row">
+            <h4>Choose a Category: </h4>
+            <button id="catBtn" class="btn" value="cats">Cats</button>
+            <button id="dogBtn" class="btn" value="dogs">Dogs</button>
+            <button id="sportBtn" class="btn" value="sports">Sports</button>
+            <button id="dankBtn" class="btn" value="dank">Dank</button>
+            <button id="wholesomeBtn" class="btn" value="wholesome">Wholesome</button>
+        </section>
+        
+        <!-- Timer Page  -->
+        <section id="countdown" class="section row">
+            <video autoplay loop id="vbg" src="./assets/video/geometric-shapes.mp4"></video>
+            <h3 unselectable="on" id="time_display">_ _ : _ _</h3>
+            <i unselectable="on" class="material-icons" id="plus_one">plus_one</i>
+            <i unselectable="on" id="playBtn" class="material-icons">play_circle_outline</i>
+            <i unselectable="on" id="pauseBtn" class="material-icons">timer_off</i>
+            <a class="material-icons" id="resumeBtn" value="submit">timer</a>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev hide"></div>
-            <div class="swiper-button-next hide"></div>
+            <div id="youtube">
 
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar hide"></div>
-        </div>
-    </section>
+                <div id="player"></div>
+            </div>
+        </section>
+
+        <!-- Brain Break Page WHOOOO!!!  -->
+        <section class="section row" id="break-page">
+            <h2 id="good-job">Good Job! Now take a Break!</h2>
+            <img src="./assets/Images/guess-what-its-break-time.jpeg" id="break-img">
+
+            <button class="btn" onclick="snd.play()" id="break-button">Take my break</button>
+
+        </section>
+        <section id="memeViewer" class="meme_viewer">
+
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+
+                    <!-- Slides -->
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination hide"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev hide"></div>
+                <div class="swiper-button-next hide"></div>
+
+
+                <div class="swiper-scrollbar hide"></div>
+            </div>
+        </section>
     </div>
     <script src="./assets/script/youtube2.js"></script>
     <script src="./assets/script/script.js"></script>
     <script src="./assets/script/welcome.js"></script>
     <script src="./assets/script/countdown.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./assets/script/usermeme.js"></script>
     <script src="./assets/script/sound.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="./assets/script/meme-viewer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 </body>
+</div>
 
 </html>

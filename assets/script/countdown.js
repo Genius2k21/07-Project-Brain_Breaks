@@ -11,9 +11,9 @@ var slider = document.querySelector("#time_select");
 var breakTimeTextEl = document.querySelector("#calc_break_time");
 var brainBreakPage = document.getElementById("break-page");
 
-var memeViewerPage = document.getElementById("memeViewer"); 
-var takeMyBreakBtn = document.getElementById("break-button"); 
-var setTimerPage = document.getElementById("set_time"); 
+var memeViewerPage = document.getElementById("memeViewer");
+var takeMyBreakBtn = document.getElementById("break-button");
+var setTimerPage = document.getElementById("set_time");
 var focusTimerPage = document.getElementById("countdown");
 var titleEl = document.getElementsByClassName("title");
 
@@ -24,6 +24,10 @@ var formattedFocusTime;
 var formattedBreakTime;
 var paused;
 var initial;
+
+slider.addEventListener("change", function () {
+  setTimeBtn.classList.remove("disabled");
+});
 
 //saves timer state into local storage
 localStorage.setItem("btn", "focus");
@@ -159,13 +163,12 @@ plusOneMinute.addEventListener("click", addMinute);
 
 //add confetti drop
 function runConfetti() {
-
   confetti({
     particleCount: 100,
     spread: 70,
-    origin: { y: 0.6 }
-  }); 
-  brainBreakPage.classList.remove("hide"); 
+    origin: { y: 0.6 },
+  });
+  brainBreakPage.classList.remove("hide");
   focusTimerPage.classList.add("hide");
 }
 
@@ -182,3 +185,4 @@ takeMyBreakBtn.addEventListener("click", function() {
       play.classList.remove("hide"); 
   }, (breakTime * 60) * 1000)
 }); 
+

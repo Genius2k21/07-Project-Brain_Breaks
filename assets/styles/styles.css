@@ -10,7 +10,6 @@
     box-sizing: border-box;
     font-size: 16px; 
     color: var(--aqua); 
-    background-color: var(--dark); 
     font-family:monospace; 
 }
 
@@ -18,11 +17,17 @@
     display:none; 
 }
 
+body{
+    background-color: var(--dark);
+    height: 100vh; 
+}
+
 .section {
-    height: 700px; 
+    background-color: var(--dark); 
     padding: 10px; 
-    margin-top: 40px; 
+    margin-top: 20px; 
     width: 375px; 
+    height: 90vh; 
     text-align: center; 
     border: 1px solid white; 
     border-radius: 10px; 
@@ -33,6 +38,7 @@
     align-items: center;
     position:relative; 
 }
+
 
 /* Brain Breaks */
 h1{
@@ -50,6 +56,11 @@ h1{
     font-family: monospace; 
     color: white;
     text-align: center;
+}
+
+.wrapper{
+    background-color: var(--dark);
+    z-index: -1;
 }
 
 .entername:focus {
@@ -175,10 +186,14 @@ output{
     display: flex; 
     align-items: center;
     justify-content: center;
-    position: absolute;  
+    /* position: absolute;  
     top: 40px; 
     left: 40px; 
-    z-index:1; 
+    z-index:1;  */
+}
+
+#vbg{
+    display: none;
 }
 
 #play-video, #mute-video {
@@ -227,16 +242,22 @@ output{
     background-color: #242424;
     display: flex;
     align-items: center;
-    
+    background-color: #7ed6df;
+    background-image:linear-gradient(315deg,  #e962f594 0%, #67f8f8a9 75%);
+
 }
 .swiper-container {
-    width: 345px;
+    width: 375px;
     height: 812px;
-    background-color: var(--light);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+}
+
+img{
+    width: 100%;
 }
 
 .swiper-wrapper{
@@ -263,6 +284,17 @@ output{
         width: 700px;
         padding: 30px;  
     }
+    
+    .wrapper{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       height: 100vh;
+       margin: 10px;
+       background-color: rgba(0, 0, 0, 0);
+    }
+
     #time_sel_cont>p{ 
         width: 240px; 
     }
@@ -270,7 +302,53 @@ output{
         width: 480px; 
     }
     .swiper-container {
+        width: 100%;
+    }
+    img{
+        height: 90%;
+        margin: 80px 700px;
+    }
+
+    #vbg{
+        display: block;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
+
+    /* video{
+        margin: 0 800px
+    } */
+
+    #countdown{
         width: 700px;
-      }
+        background-color: rgba(0, 0, 0, 0.747);
+    }
+
+    .swiper-slide{
+        justify-content: center;
+        align-items: center;
+    }
     
 }
+
+@media screen and (max-height: 430px) {
+    .section{
+        border: 0; 
+        border-radius: 0; 
+        box-shadow: 0px 0px 0px white;
+        height: 0; 
+        padding: 0; 
+        margin-top: 20px; 
+        width: 375px; 
+        display: block;
+    }
+    .wrapper{
+        display: block;
+    }
+    
+}
+
