@@ -21,8 +21,8 @@ chooseMemePage.classList.add("hide");
 focusTimerPage.classList.add("hide");
 brainBreakPage.classList.add("hide");
 
-//RESOLVED(BUG!!!! When this is commented out, the memes show up.)
-// memeViewerPage.classList.add("hide");
+//RESOLVED(BUG!!!!! When this is commented out, the memes show up.)
+memeViewerPage.classList.add("hide");
 
 //when break timer reaches 0, goes back to timer page
 
@@ -33,6 +33,7 @@ welcomeSaveButton.addEventListener("click", function (e) {
     setTimerPage.classList.remove("hide");
   }, 4000);
 });
+
 
 //when user clicks on set Time button then it goes to Choose Meme Page
 setTimeBtn.addEventListener("click", function (e) {

@@ -215,7 +215,7 @@ wholesomeBtn.addEventListener("click", getWholesomeMemes);
 
 //this saves the user's choice into local storage
 // function setLocalStorage(event) {
-//   localStorage.setItem("User-Choice", event.target.value);
+//   localStorage.setItem("User-Choice", event.target.value);!
 // }
 
 function getUserChoice(event) {
