@@ -15,6 +15,9 @@ var welcomeSaveButton = document.getElementById("submitname");
 var setTimeBtn = document.getElementById("set_time_btn"); 
 var catBtn = document.getElementById("catBtn"); 
 var dogBtn = document.getElementById("dogBtn"); 
+var sportBtn = document.getElementById("sportBtn"); 
+var dankBtn = document.getElementById("dankBtn"); 
+var wholesomeBtn = document.getElementById("wholesomeBtn"); 
 var takeMyBreakBtn = document.getElementById("break-button"); 
 var play = document.querySelector("#playBtn");
 
@@ -48,18 +51,18 @@ setTimeBtn.addEventListener("click", function (e) {
 });
 
 //when user clicks on a category, user goes to focus timer page
-
-catBtn.addEventListener("click", function() {
+function displaynewPage() {
     chooseMemePage.classList.add("hide"); 
     focusTimerPage.classList.remove("hide"); 
     play.classList.remove("hide"); 
     pause.classList.add("hide"); 
+}
 
-})
-dogBtn.addEventListener("click", function() {
-    chooseMemePage.classList.add("hide"); 
-    focusTimerPage.classList.remove("hide"); 
-})
+catBtn.addEventListener("click", displaynewPage); 
+dogBtn.addEventListener("click", displaynewPage); 
+sportBtn.addEventListener("click", displaynewPage); 
+dankBtn.addEventListener("click", displaynewPage); 
+wholesomeBtn.addEventListener("click", displaynewPage); 
 
 //when countdown timer reaches 0 goes to break page
 //this is in the countdown function in countdown.js
